@@ -6,148 +6,74 @@
     <title>Document</title>
 </head>
 <body>
- 
-    <style> 
+  <style> 
 
+    div {
+    
+      width: 100px;
+    
+      height: 100px;
+    
+      background-color: red;
+    
+      position: relative;
+    
+      animation: myfirst 1s ease-in-out infinite forwards;
 
-.con{
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-color: aquamarine;
-}
+      border-radius: 50px;
+    
+      border: 2px solid red;
+    }
+    
+    
+    
+    @keyframes myfirst {
+    
+      0%   {background-color:red; left:200px; top:220px; transform: scaleY(0.2);}
+      10% {background-color:red;transform: scaleY(0.3);}
+      20% {background-color:red;transform: scaleY(0.5);}
+      30% {background-color:red;transform: scaleY(1);}
+    
+      50%  {background-color:red; left:200px; top:0px;transform: scaleY(1);}
+    
 
+      /* 70% {background-color:red;transform: scaleY(1);} */
+      80% {background-color:red;transform: scaleY(1);}
+      /* 90% {background-color:red;transform: scaleY(0.3);} */
+      100% {background-color:red; left:200px; top:220px; transform: scaleY(0.2);}
+    
+    }
 
-        .rotatel {
-         position: fixed;
-         top: 100px;
-         left: 200px;
-         
-          width: 100px;
-        
-          height: 100px;
-        
-          background: red;
-          transform-origin: 0% 100%;
-          transition: transform 5s;
-          z-index: 2;
-        
-        }
-        
-        
-        
-        .con:hover .rotatel {
-
-          transform: rotate(-90deg);
-        
-        
-        }
-
-        .rotater {
-         position: fixed;
-         top: 100px;
-         left: 300px;
-         
-          width: 100px;
-        
-          height: 100px;
-        
-          background: rgb(255, 196, 0);
-          transform-origin: bottom right;
-          transition: transform 5s;
-          z-index: 2;
-        
-        }
-        
-        
-        
-        .con:hover .rotater{
-
-          transform: rotate(90deg);
-         
-        
-        }
-        .rotatebl {
-         position: fixed;
-         top: 200px;
-         left: 200px;
-         
-          width: 100px;
-        
-          height: 100px;
-        
-          background: rgb(0, 255, 8);
-          transform-origin: top left;
-          transition: transform 5s;
-          z-index: 2;
-        
-        }
-        
-        
-        
-        .con:hover .rotatebl {
-
-          transform: rotate(90deg);
-        
-        
-        }
-
-        .rotatebr {
-         position: fixed;
-         top: 200px;
-         left: 300px;
-         
-          width: 100px;
-        
-          height: 100px;
-        
-          background: rgb(0, 51, 255);
-          transform-origin: top right;
-          transition: transform 5s;
-          z-index: 2;
-        
-        }
-        
-        
-        
-        .con:hover .rotatebr{
-
-          transform: rotate(-90deg);
-         
-        
-        }
-        h1{
-            position: fixed;
-            top: 150px;
-            left: 240px;
-            z-index: 1;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(107, 107, 107);
-            background-color: rgba(0, 123, 123, 0.441);
-            border: 1px solid rgb(0, 255, 145);
-            border-radius: 5px;
-            padding: 10px;
-        }
-        </style>
-        
-        
-        <div class="con">
-            <div class="rotatel">
-
-            </div>
-            <div class="rotater">
-
-            </div>
-            <div class="rotatebl">
-
-            </div>
-            <div class="rotatebr">
-
-            </div>
-            <h1>HELLO</h1>
-        </div>
-        
-        
+    .floor{
+      width: 400px;
+      height: 10px;
+      border-top: 2px solid black;
+    }
+    
+    </style>
+    
+    <h1>CSS Animation</h1>
+    
+    
+    
+    <p>This example uses the shorthand animation property:</p>
+    
+    
+    
+    <div></div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="floor"></p>
+  
+  
     
 </body>
 </html>
