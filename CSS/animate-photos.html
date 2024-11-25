@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Photos</title>
+</head>
+<body>
+    <style>
+        .content{
+            position: relative;
+            width: 100%;
+            height: 450px;
+            background-color: aquamarine;
+            overflow: hidden;
+            }
+            img{
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.5s;
+                transform-origin: bottom left;
+            }
+            .content div{
+                position: absolute;
+                top: 100px;
+                left: 300px;
+                height: 250px;
+                width: 200px;
+                transform-origin: bottom left;
+                transition: transform 2s;
+                z-index: 1;
+            }
+            .content:hover .imgcontainer1{
+                transform: rotate(-30deg);
+            }
+            .content:hover .imgcontainer2{
+                transform: rotate(-15deg);
+            }
+            .content:hover .imgcontainer3{
+                transform: rotate(0deg);
+            }
+            .content:hover .imgcontainer4{
+                transform: rotate(15deg);
+            }
+            .content:hover .imgcontainer5{
+                transform: rotate(30deg);
+            }
+            .content div:hover img{
+                border: 1px solid orangered;
+                transform: scale(1.2,1.2);
+            }
+            .content div:hover{
+                z-index: 10;
+            }
+    </style>
+    <div class="content">
+        <div class="imgcontainer1">
+            <img class="img1" src="bg_image.jpg" alt="">
+        </div>
+        <div class="imgcontainer2">
+            <img class="img2" src="boat.gif" alt="">
+        </div>
+        <div class="imgcontainer3">
+            <img class="img3" src="download.jpg" alt="">
+        </div>
+        <div class="imgcontainer4">
+            <img class="img4" src="Assets/productimage.jpg" alt="">
+        </div>
+        <div class="imgcontainer5">
+            <img class="img5" src="bg_image.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

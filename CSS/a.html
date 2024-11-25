@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        body {
+        
+          background-color:white;
+        
+        }
+        
+        ul {
+        
+          list-style-type: none;
+        
+          margin: 0;
+        
+          padding: 0;
+        
+          overflow: hidden;
+        
+          background-color: #38444d;
+        
+        }
+        
+        
+        li {
+        
+          float: left;
+        
+        }
+        
+        
+        li a, .dropbtn {
+        
+          display: inline-block;
+        
+          color: white;
+        
+          text-align: center;
+        
+          padding: 14px 16px;
+        
+          text-decoration: none;
+        
+        }
+        
+        
+        li a:hover, .dropdown:hover .dropbtn {
+        
+          background-color: red;
+        
+        }
+        
+        
+        li.dropdown {
+        
+          display: inline-block;
+        
+        }
+        
+        
+        .dropdown-content {
+        
+          display: none;
+        
+          position: absolute;
+        
+          background-color: #f9f9f9;
+        
+          min-width: 160px;
+        
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        
+          z-index: 1;
+        
+        }
+        
+        
+        .dropdown-content a {
+        
+          color: black;
+        
+          padding: 12px 16px;
+        
+          text-decoration: none;
+        
+          display: block;
+        
+          text-align: left;
+        
+        }
+        
+        
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        
+        
+        .dropdown:hover .dropdown-content {
+        
+          display: block;
+        
+        }
+        
+        </style>
+    <div class="headeroptions">
+        <h3><a href="">About</a></h3>
+        <h3><a href="">Services</a></h3>
+        <h3><a href="" class="logindrop">Login</a></h3>
+        <div class="logindiv" id="logindiv">
+            <img class="triangle" src="triangle2.png" alt="Triangle image" height="10px" width="10px">
+            <form action="action_page.php" method="post">
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input class="textinput" type="text" placeholder="Enter Username" name="uname" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input class="textinput" type="password" placeholder="Enter Password" name="psw" required>
+              
+                  <button type="submit">Login</button>
+                  <label>
+                    <input style="accent-color: #ff6200;" type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                </div>
+                <div class="container forgotpass">
+                    <button type="button" class="cancelbtn" style=".logindiv:target{display: none;}"><a style="color: white;" href="">Cancel</a></button>
+                    <span class="psw">Forgot <a href="#">Password?</a></span>
+                  </div>
+              </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+p{
+    text-align: center;
+    color: red;
+}
+
+#para1{
+    text-align: center;
+    color: chartreuse;
+}
+
+.center{
+    text-align: center;
+    color: blueviolet;
+}
+
+p.large{
+    font-size: 300%;
+}
+
+*{
+    text-align: center;
+    color: blue;
+}
+
+h3, h4{
+    text-align: center;
+    color: crimson;
+}

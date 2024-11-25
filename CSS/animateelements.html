@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Elements</title>
+</head>
+<body>
+    <style>
+        .cards{
+        }
+        .top, .bottom{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .card{
+            width: 500px;
+            height: 200px;
+            background-color: gray;
+            margin: 10px;
+            transition: transform .5s;
+        }
+        .card:hover{
+            transform: scale(1.1,1.1);
+        }
+        .card img{
+            height: 200px;
+            width: 200px;
+        }
+        .parent{
+            height: 500px;
+            width: 100%;
+            padding: 40px;
+            position: relative;
+            background-color: aliceblue;
+        }
+        .orange{
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 6s;
+            transition-timing-function: linear;
+            /* position: absolute; */
+        }
+        /* .orange:hover{
+            transform: rotate(1070deg);
+        } */
+
+        .green{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 3s;
+            transition-timing-function: linear;
+            /* transition-delay: 1s; */
+            position: absolute;
+            top: 85px;
+            left: 65px;
+            }
+        /* .green:hover{
+            transform: rotate(1070deg);
+        } */
+
+
+        .blue{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            transition: transform 1s;
+            transition-timing-function: linear;
+            /* transition-delay: 2s; */
+            position: absolute;
+            top: 110px;
+            left: 90px;
+            }
+        /* .blue:hover{
+            transform: rotate(1070deg);
+        } */
+
+        
+        .btn:hover .orange,.btn:hover .green,.btn:hover .blue{
+            transform: rotate(180deg);
+        }
+        /* .btn:hover ~ .orange + .green{
+            transform: rotate(180deg);
+        }
+        .btn:hover + .orange{
+            transform: rotate(180deg);
+        } */
+        
+        /* .btn:hover + .green{
+            transform: rotate(180deg);
+        }
+        
+        .btn:hover + .blue{
+            transform: rotate(180deg);
+        } */
+
+
+    </style>
+    <div class="cards">
+        <div class="top">
+            <div class="card">
+                <img src="Assets/productimage.jpg" alt="Product Image">
+            </div>
+            <div class="card">
+                <img src="Assets/productimage.jpg" alt="Product Image">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="card">
+                <img src="Assets/productimage.jpg" alt="Product Image">
+            </div>
+            <div class="card">
+                <img src="Assets/productimage.jpg" alt="Product Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="parent">
+        
+        
+        <button class="btn">Rotate
+
+            <div class="orange">
+            </div>
+            <div class="orange">
+            </div>
+            <div class="green">
+            </div>
+            <div class="blue">
+            </div>
+        </button>
+    
+
+    </div>
+</body>
+</html>

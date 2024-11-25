@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<body>
+    
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: rgb(11, 3, 32);
+            color: white;
+            height: 100vh;
+        }
+        .parent{
+            width: 100%;
+        }
+        .leftdiv{
+            margin: auto;
+            padding: 50px;
+        }
+        .rightdiv{
+            margin: auto;
+            padding: 50px;
+        }
+        .topleftdiv ul{
+            list-style-type: "> ";
+            padding-left: 15px;
+        }
+        a{
+            color: white;
+        }
+        .socials img{
+            padding: 5px;
+            border: 2px solid white;
+            border-radius: 20px;
+            width: 20px;
+        }
+        .socials img:hover{
+            cursor: pointer;
+        }
+        .topleftdiv{
+            height: 200px;
+        }
+        .toprightdiv{
+            height: 200px;
+        }
+        .toprightdiv a{
+            text-decoration: none;
+        }
+        .gallary img{
+            border: 4px solid white;
+            height: 60px;
+            width: 80px;
+            margin: 2px;
+        }
+        .socials{
+            margin-top: 20px;
+        }
+        .rightfooter ul li{
+            display: inline;
+            margin: auto;
+            padding: 0px 10px;
+            border-right: 2px solid rgb(34, 34, 34);
+        }
+        .rightfooter ul li:last-child{
+            border-right: none;
+        }
+        .footer{
+            display: flex;
+            border-top: 2px solid rgb(34, 34, 34);
+            width: 82%;
+            margin: auto;
+        }
+        .leftfooter{
+            margin: auto;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .rightfooter{
+            margin: auto;
+            margin-top: 10px;
+        }
+        .signupdiv{
+            position: relative;
+        }
+        .signupdiv input{
+            height: 50px;
+            width: 350px;
+            padding-left: 20px;
+            font-size: 15px;
+        }
+        .signupdiv button{
+            /* position: absolute;
+            top: 0%;
+            right: 0%; */
+            height: 50px;
+            width: 100px;
+            background-color: rgb(109, 224, 20);
+            color: white;
+            border: none;
+            font-size: 20px;
+        }
+        .topdiv{
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bottomdiv{
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <div class="parent">
+        <div class="topdiv">
+            <div class="topleftdiv" style="margin-right: 250px;">
+                <h1>Company</h1>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Conditions</li>
+                    <li>FAQs & Help</li>
+                </ul>
+            </div>
+            <div class="toprightdiv">
+                <h1>Contact</h1>
+                <address>    
+                <img style="display: inline;" src="Assets/location-icon.png" alt="boat gif" width="20px" height="20px">
+                    123 Street, New York, USA
+                </address>
+                <a href="tel:123-456-7890">
+                    <img src="Assets/phone-icon.png" alt="boat gif" width="20px" height="20px"> 123-456-7890
+                </a><br>
+                <a href="mailto:mail@domain.com">
+                    <img src="Assets/mail-icon.png" alt="boat gif" width="20px" height="20px">  mail@domain.com</a>
+                <div class="socials">
+                    <img src="Assets/twitter-icon.png" alt="boat gif">
+                    <img src="Assets/facebook-icon.png" alt="boat gif">
+                    <img src="Assets/youtube-icon.png" alt="boat gif">
+                    <img src="Assets/linkedin-icon.png" alt="boat gif">
+                </div>
+            </div>
+        </div>
+        <div class="bottomdiv"  style="margin-top: 50px;">
+            <div class="bottomleftdiv">
+                <h1>Gallary</h1>
+                <div class="gallary" style="margin-right: 120px;">
+                    <div class="topgallary" >
+                        <img src="boat.gif" alt="boat gif">
+                        <img src="boat.gif" alt="boat gif">
+                        <img src="boat.gif" alt="boat gif">
+                    </div>
+                    <div class="bottomgallary">
+                        <img src="boat.gif" alt="boat gif">
+                        <img src="boat.gif" alt="boat gif">
+                        <img src="boat.gif" alt="boat gif">
+                    </div>
+                </div>
+            </div>
+            <div class="bottomrightdiv">
+                <h1>Newsletter</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, necessitatibus.</p>
+                <div class="signupdiv">
+                    <input type="search" name="email" id="" placeholder="Your email">
+                    <button>SignUp</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="leftdiv">
+            
+            
+        </div>
+        <div class="rightdiv">
+            
+           
+           
+        </div> -->
+    </div>
+    <div class="footer">
+        <div class="leftfooter">
+            <p>&copy; <u>Your Site Name</u>, All Rights Reserved. Designed by <u>HTML Codex</u></p>
+        </div>
+        <div class="rightfooter">
+            <ul>
+                <li>Home</li>
+                <li>Cookies</li>
+                <li>Help</li>
+                <li>FAQs</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>

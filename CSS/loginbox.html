@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+
+    .container {
+    
+      position: relative;
+    
+    }
+    
+    
+    
+    .black-box {
+    
+      position: relative;
+    
+      z-index: 1;
+    
+      border: 2px solid black;
+    
+      height: 100px;
+    
+      margin: 30px;
+    
+    }
+    
+    
+    
+    .gray-box {
+    
+      position: absolute;
+    
+      z-index: 3; /* gray box will be above both green and black box */
+    
+      background: lightgray;
+    
+      height: 60px;  
+    
+      width: 70%;
+    
+      left: 50px;
+    
+      top: 50px;
+    
+    }
+    
+
+    .logo{
+      position: relative;
+      height: 410px;
+      width: 410px;
+      background-color: rgba(184, 184, 184, 0.633);
+      border: 5px solid black;
+    }
+    .logo div{
+      margin: 5px;
+    }
+    .red-box{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      height: 400px;
+      width: 400px;
+      background-color: red;
+      text-align: left;
+    }
+    .green-box{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      height: 400px;
+      width: 200px;
+      background-color: green;
+      text-align: right;
+    }
+    .yellow-box{
+      position: absolute;
+      top: 200px;
+      right: 0;
+      z-index: 3;
+      height: 200px;
+      width: 400px;
+      background-color: yellow;
+      text-align: right;
+    }
+    .blue-box{
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      z-index: 4;
+      height: 200px;
+      width: 200px;
+      background-color: blue;
+      text-align: left;
+    }
+    </style>
+    
+    
+    
+    <h1>Z-index Example</h1>
+    
+    
+    
+    <p>An element with greater stack order is always above an element with a lower stack order.</p>
+    
+    
+    
+    <div class="container">
+    
+      <div class="black-box">Black box (z-index: 1)</div>
+    
+      <div class="gray-box">Gray box (z-index: 3)</div>
+    
+      
+
+
+
+    </div> 
+    
+    <div class="logo">
+      <div class="red-box">INDEX 1 </div>
+      <div class="green-box">INDEX 2</div>
+      <div class="yellow-box">INDEX 3</div>
+      <div class="blue-box">INDEX 4</div>
+    </div>      
+    
+    
+</body>
+</html>

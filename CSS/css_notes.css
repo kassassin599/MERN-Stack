@@ -1,0 +1,6174 @@
+/* **CSS - Cascading Style Sheets** */
+
+/* **What is CSS?** */
+CSS stands for Cascading Style Sheets. It is used to describe how HTML elements should appear on screens, paper, or other media.
+
+A CSS rule is written with a "declaration block," which contains one or more style declarations. Each declaration consists of a CSS property name and its value, separated by a colon. 
+You can write multiple declarations, separating each with a semicolon, 
+and the whole block is enclosed in curly braces.
+
+
+
+/* **CSS Selectors** */
+
+CSS selectors are used to select HTML elements that you want to style. 
+
+
+/*There are five main types of CSS selectors:*/
+/*1. **Simple selectors** - They select elements based on the element's name, ID, or class.*/
+/*2. **Combinator selectors** - They select elements based on the relationship between elements.*/
+/*3. **Pseudo-class selectors** - These select elements based on a certain state (e.g., :hover).*/
+/*4. **Pseudo-elements selectors** - These select and style a specific part of an element (e.g., ::before).*/
+/*5. **Attribute selectors** - They select elements based on attributes or attribute values.*/
+
+
+
+/* **The Element Selector** */
+
+The element selector selects HTML elements by their tag name.
+
+*Example:* To center and make all `<p>` elements red:
+css
+p {
+    text-align: center;
+    color: red;
+}
+ <p> cad desk </p>
+
+
+
+/* **The ID Selector** */
+
+The ID selector selects a unique element by its `id` attribute. Since `id` is unique within a page, it targets only one element.
+
+*Example:* To style an element with the `id="para1"`:
+css
+#para1 {
+    text-align: center;
+    color: red;
+}
+
+html
+<p id="para1">Hello World!</p>
+
+
+
+
+/* **The Class Selector** */
+
+The class selector is used to style elements with a specific class. Unlike IDs, multiple elements can share the same class.
+
+*Example:* To style all elements with the class `"center"`:
+css
+.center {
+    text-align: center;
+    color: red;
+}
+
+html
+<h1 class="center">Red and centered</h1>
+<p class="center">This text is red and centered.</p>
+
+
+You can also specify class styles for specific elements:
+css
+p.center {
+    color: red;
+}
+
+
+*HTML elements can have more than one class:*
+css
+p.large {
+    font-size: 300%;
+}
+
+html
+<p class="center large">This paragraph is red, centered, and large.</p>
+
+
+
+
+/* **The Universal Selector** */
+
+The universal selector (`*`) applies styles to all elements on the page.
+
+*Example:*
+css
+* {
+    text-align: center;
+    color: blue;
+}
+
+
+
+
+/* **The Grouping Selector** */
+
+Grouping selectors allow you to apply the same style to multiple elements at once, minimizing code repetition.
+
+*Example:* Instead of writing separate rules for `<h1>`, `<h2>`, and `<p>`, you can group them:
+css
+h1, h2, p {
+    text-align: center;
+    color: red;
+}
+
+
+
+
+/* **Difference Between Class and ID** */
+
+- A class can be used for multiple elements, while an `id` is unique to one element.
+
+*Example:* To style an element with the `id="myHeader"`:
+css
+#myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+}
+
+
+.city {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+}
+
+html
+<h1 id="myHeader">My Cities</h1>
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+
+
+
+**CSS Simple Selectors Summary**
+
+- `#id` - Selects an element by its `id`.
+- `.class` - Selects all elements with a specific class.
+- `element.class` - Selects a specific element with a class.
+- `*` - Selects all elements.
+- `element` - Selects all elements of a specific type.
+- `element, element, ...` - Selects multiple elements at once. 
+
+
+------------------------------------>>>>>CSS NOTES 2<<<<<<<---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***CSS Backgrounds***/
+
+
+
+CSS background properties are used to create background effects for elements. The main background properties are:
+
+
+
+- `background-color`
+
+- `background-image`
+
+- `background-repeat`
+
+- `background-attachment`
+
+- `background-position`
+
+- `background` (shorthand property)
+
+
+
+
+
+/***Background Color***/
+
+
+
+The `background-color` property sets the background color of an element.
+
+
+
+*Example:*
+
+```css
+
+body {
+
+  background-color: lightblue;
+
+}
+
+h1 {
+
+  background-color: green;
+
+}
+
+div {
+
+  background-color: lightblue;
+
+}
+
+p {
+
+  background-color: yellow;
+
+}
+
+```
+
+
+
+
+
+/***Opacity / Transparency***/
+
+
+
+The `opacity` property controls how transparent an element is, with values ranging from 0.0 (fully transparent) to 1.0 (fully opaque).
+
+
+
+*Example:*
+
+```css
+
+div {
+
+  background-color: green;
+
+  opacity: 0.3;
+
+}
+
+```
+
+
+
+
+
+/***Background Image***/
+
+
+
+The `background-image` property sets an image as the background of an element. By default, the image will repeat to cover the entire element.
+
+
+
+*Example:*
+
+```css
+
+body {
+
+  background-image: url("car.gif");
+
+}
+
+```
+
+
+
+
+
+/***Background Repeat***/
+
+
+
+The `background-repeat` property defines how the background image repeats. You can control whether it repeats horizontally, vertically, or not at all.
+
+
+
+*Examples:*
+
+```css
+
+body {
+
+  background-image: url("car.png");
+
+  background-repeat: repeat-x; /* Repeats horizontally */
+
+}
+
+
+
+body {
+
+  background-image: url("car.png");
+
+  background-repeat: no-repeat; /* No repetition */
+
+}
+
+```
+
+
+
+
+
+/***Background Position***/
+
+
+
+The `background-position` property sets the position of the background image.
+
+
+
+*Example:*
+
+```css
+
+body {
+
+  background-image: url("img_tree.png");
+
+  background-repeat: no-repeat;
+
+  background-position: right top; /* Places the image in the top-right corner */
+
+}
+
+```
+
+
+
+
+
+/***Background Attachment***/
+
+
+
+The `background-attachment` property controls whether the background image scrolls with the page or remains fixed.
+
+
+
+*Examples:*
+
+```css
+
+body {
+
+  background-image: url("img_tree.png");
+
+  background-repeat: no-repeat;
+
+  background-position: right top;
+
+  background-attachment: fixed; /* Image stays in place while scrolling */
+
+}
+
+
+
+body {
+
+  background-image: url("img_tree.png");
+
+  background-attachment: scroll; /* Image scrolls with the page */
+
+}
+
+```
+
+
+
+
+
+/***Shorthand Property***/
+
+
+
+You can combine multiple background properties into a single `background` shorthand.
+
+
+
+*Example:*
+
+```css
+
+body {
+
+  background: blue url("img_tree.png") no-repeat right top;
+
+}
+
+```
+
+
+
+
+
+/***Background Size***/
+
+
+
+The `background-size` property controls the size of the background image.
+
+
+
+*Example:*
+
+```css
+
+body {
+
+  background-image: url("balak.png");
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-attachment: fixed;
+
+  background-size: 100%; /* Image covers the entire element */
+    
+}
+
+```
+
+
+
+
+
+/***Background Origin***/
+
+
+
+The `background-origin` property specifies the starting position of the background image. It can have the following values:
+
+
+
+- `border-box`: Starts from the upper left corner of the border.
+
+- `padding-box` (default): Starts from the upper left corner of the padding edge.
+
+- `content-box`: Starts from the upper left corner of the content.
+
+
+
+*Example:*
+
+```css
+
+#example {
+
+  border: 10px solid black;
+
+  padding: 35px;
+
+  background: url(img_flwr.gif);
+
+  background-repeat: no-repeat;
+
+  background-origin: content-box;
+
+}
+
+```
+
+
+
+```html
+
+<div id="example">
+
+  <h2>Lorem Ipsum Dolor</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+
+</div>
+
+```
+
+
+
+
+
+
+
+---------------------------------------->CSS NOTES -3<-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* CSS Border Style
+
+  The `border-style` property determines the type of border to show.*/
+
+  
+
+  The following values are available for the `border-style` property:
+
+  
+
+  - **dotted:** Creates a dotted border.
+
+  - **dashed:** Creates a dashed border.
+
+  - **solid:** Creates a solid border.
+
+  - **double:** Creates a double border.
+
+  - **groove:** Creates a 3D grooved border. The appearance depends on the `border-color` value.
+
+  - **ridge:** Creates a 3D ridged border. The appearance depends on the `border-color` value.
+
+  - **inset:** Creates a 3D inset border. The appearance depends on the `border-color` value.
+
+  - **outset:** Creates a 3D outset border. The appearance depends on the `border-color` value.
+
+  - **none:** No border is shown.
+
+  - **hidden:** The border is hidden.
+
+  
+
+  The `border-style` property can be set with one to four values, which apply to the top, right, bottom, and left borders, respectively.
+
+  
+
+  <style>
+
+  p.dotted {border-style: dotted;}
+
+  p.dashed {border-style: dashed;}
+
+  p.solid {border-style: solid;}
+
+  p.double {border-style: double;}
+
+  p.groove {border-style: groove;}
+
+  p.ridge {border-style: ridge;}
+
+  p.inset {border-style: inset;}
+
+  p.outset {border-style: outset;}
+
+  p.none {border-style: none;}
+
+  p.hidden {border-style: hidden;}
+
+  p.mix {border-style: dotted dashed solid double;}
+
+  </style>
+
+  
+
+  
+
+  <h2>The border-style Property</h2>
+
+  <p>This property specifies what kind of border to display:</p>
+
+  
+
+  <p class="dotted">A dotted border.</p>
+
+  <p class="dashed">A dashed border.</p>
+
+  <p class="solid">A solid border.</p>
+
+  <p class="double">A double border.</p>
+
+  <p class="groove">A groove border.</p>
+
+  <p class="ridge">A ridge border.</p>
+
+  <p class="inset">An inset border.</p>
+
+  <p class="outset">An outset border.</p>
+
+  <p class="none">No border.</p>
+
+  <p class="hidden">A hidden border.</p>
+
+  <p class="mix">A mixed border.</p>
+
+  
+
+  
+
+  
+
+  /* CSS Border Width
+
+  The `border-width` property sets the width of all four borders.
+
+  
+
+  You can specify the width using a precise size (in px, pt, cm, em, etc.) or choose one of three preset values: thin, medium, or thick. */
+
+  p.one {
+
+    border-style: solid;
+
+    border-width: 5px;
+
+  }
+
+  
+
+  p.two {
+
+    border-style: solid;
+
+    border-width: medium;
+
+  }
+
+  
+
+  p.three {
+
+    border-style: dotted;
+
+    border-width: 2px;
+
+  }
+
+  
+
+  p.four {
+
+    border-style: dotted;
+
+    border-width: thick;
+
+  }
+
+  
+
+  p.five {
+
+    border-style: double;
+
+    border-width: 15px;
+
+  }
+
+  
+
+  p.six {
+
+    border-style: double;
+
+    border-width: thick;
+
+  }
+
+  
+
+  <h2>The border-width Property</h2>
+
+  <p>This property specifies the width of the four borders:</p>
+
+  
+
+  <p class="one">Some text.</p>
+
+  <p class="two">Some text.</p>
+
+  <p class="three">Some text.</p>
+
+  <p class="four">Some text.</p>
+
+  <p class="five">Some text.</p>
+
+  <p class="six">Some text.</p>
+
+  
+
+  <p><b>Note:</b> The `border-width` property will not work by itself. Always set the `border-style` property first to define the borders.</p>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  /* Specific Side Widths
+
+  The `border-width` property can have one to four values, which set the width for the top, right, bottom, and left borders. */
+
+  
+
+  p.one {
+
+    border-style: solid;
+
+    border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+
+  }
+
+  
+
+  p.two {
+
+    border-style: solid;
+
+    border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+
+  }
+
+  
+
+  p.three {
+
+    border-style: solid;
+
+    border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+
+  }
+
+  
+
+  
+
+  <h2>The border-width Property</h2>
+
+  <p>The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border):</p>
+
+  
+
+  <p class="one">Some text.</p>
+
+  <p class="two">Some text.</p>
+
+  <p class="three">Some text.</p>
+
+  
+
+  
+
+  
+
+  /* CSS Border Color
+
+  The `border-color` property sets the color of all four borders. */
+
+  p.one {
+
+    border-style: solid;
+
+    border-color: red;
+
+  }
+
+  
+
+  <p class="one">A solid red border</p>
+
+  
+
+  
+
+  /* Specific Side Colors
+
+  The `border-color` property can have one to four values, which set the color for the top, right, bottom, and left borders.  */
+
+  
+
+  p.one {
+
+    border-style: solid;
+
+    border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+
+  }
+
+  
+
+  <h2>The border-color Property</h2>
+
+  <p>The `border-color` property can use one to four values to specify the color of the top, right, bottom, and left borders.</p>
+
+  
+
+  <p class="one">A solid multicolor border</p>
+
+  
+
+  
+
+  /* CSS Border - Individual Sides
+
+  From the examples on the previous pages, you’ve seen how to set different borders for each side.
+
+  
+
+  In CSS, there are properties to set each border individually: top, right, bottom, and left. */
+
+  
+
+  p {
+
+    border-top-style: dotted;
+
+    border-right-style: solid;
+
+    border-bottom-style: dotted;
+
+    border-left-style: solid;
+
+  }
+
+  
+
+  
+
+  /* 
+
+  Here’s how it works:
+
+  
+
+  - **Four values:** `border-style: dotted solid double dashed;`  
+
+    - Top border: dotted  
+
+    - Right border: solid  
+
+    - Bottom border: double  
+
+    - Left border: dashed  
+
+  
+
+  - **Three values:** `border-style: dotted solid double;`  
+
+    - Top border: dotted  
+
+    - Right and left borders: solid  
+
+    - Bottom border: double  
+
+  
+
+  - **Two values:** `border-style: dotted solid;`  
+
+    - Top and bottom borders: dotted  
+
+    - Right and left borders: solid  
+
+  
+
+  - **One value:** `border-style: dotted;`  
+
+    - All four borders: dotted  
+
+  
+
+  
+
+                          /* SS Border - Shorthand Property */
+
+  /* As shown on the previous page, there are many properties to manage when working with borders.
+
+  
+
+  To simplify the code, you can combine all the individual border properties into one property.
+
+  
+
+  The `border` property is a shorthand that covers these individual border properties: */
+
+  
+
+  border-width
+
+  border-style (required)
+
+  border-color
+
+  
+
+  
+
+  <style>
+
+  .onee {
+
+    border: 5px solid red;
+
+  }
+
+  
+
+  
+
+                                  /* left Border */
+
+  .two{
+
+    border-left: 6px solid red;
+
+  }
+
+  
+
+  
+
+                                /* Bottom Border */
+
+  .three{
+
+    border-bottom: 6px solid red;
+
+  }
+
+  
+
+    </style>
+
+    
+
+  
+
+    
+
+    <p class="onee">Some text.</p>
+
+    <p class="two">Some text.</p>
+
+    <p class="three">Some text.</p>
+
+  
+
+  
+
+  
+
+                                /* CSS Rounded Borders
+
+  The `border-radius` property is used to create rounded corners on an element:
+
+  
+
+  - Normal border
+
+  - Slightly rounded border
+
+  - More rounded border
+
+  - Fully rounded border */
+
+  
+
+  
+
+  p.normal {
+
+    border: 2px solid red;
+
+    padding: 5px;
+
+  }
+
+  
+
+  p.round1 {
+
+    border: 2px solid red;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+  }
+
+  
+
+  p.round2 {
+
+    border: 2px solid red;
+
+    border-radius: 8px;
+
+    padding: 5px;
+
+  }
+
+  
+
+  p.round3 {
+
+    border: 2px solid red;
+
+    border-radius: 12px;
+
+    padding: 5px;
+
+  }
+
+  
+
+  
+
+  <h2>The border-radius Property</h2>
+
+  <p>This property is used to add rounded borders to an element:</p>
+
+  
+
+  <p class="normal">Normal border</p>
+
+  <p class="round1">Round border</p>
+
+  <p class="round2">Rounder border</p>
+
+  <p class="round3">Roundest border</p>
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+/* border-radius	A shorthand property for setting all the four border-*-*-radius properties */
+
+
+
+<style> 
+
+#rcorners1 {
+
+  border-radius: 15px 50px 30px 5px;
+
+  background: #73AD21;
+
+  padding: 20px; 
+
+  width: 200px;
+
+  height: 150px; 
+
+}
+
+
+
+#rcorners2 {
+
+  border-radius: 15px 50px 30px;
+
+  background: #73AD21;
+
+  padding: 20px; 
+
+  width: 200px;
+
+  height: 150px; 
+
+}
+
+
+
+#rcorners3 {
+
+  border-radius: 15px 50px;
+
+  background: #73AD21;
+
+  padding: 20px; 
+
+  width: 200px;
+
+  height: 150px; 
+
+} 
+
+
+
+#rcorners4 {
+
+  border-radius: 15px;
+
+  background: #73AD21;
+
+  padding: 20px; 
+
+  width: 200px;
+
+  height: 150px; 
+
+} 
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>The border-radius Property</h1>
+
+
+
+<p>Four values - border-radius: 15px 50px 30px 5px:</p>
+
+<p id="rcorners1"></p>
+
+
+
+<p>Three values - border-radius: 15px 50px 30px:</p>
+
+<p id="rcorners2"></p>
+
+
+
+<p>Two values - border-radius: 15px 50px:</p>
+
+<p id="rcorners3"></p>
+
+
+
+<p>One value - border-radius: 15px:</p>
+
+<p id="rcorners4"></p>
+
+
+
+
+--------------------------------->CSS NOTES<--------------------------------------------------------
+
+
+
+
+
+Margins in CSS
+
+  
+
+CSS margins create space around elements, outside their borders. With CSS, you can fully control the margins and set them individually for each side of an element: top, right, bottom, and left.
+
+
+
+Individual Side Margins in CSS
+
+
+
+CSS lets you set margins for each side of an element using these properties:
+
+
+
+- `margin-top`
+
+- `margin-right`
+
+- `margin-bottom`
+
+- `margin-left`
+
+
+
+Each of these properties can take the following values:
+
+
+
+- `auto`: The browser decides the margin.
+
+- `length`: You set a specific size, like px, pt, cm, etc.
+
+- `%`: The margin is a percentage of the containing element's width.
+
+- `inherit`: The margin is copied from the parent element.
+
+
+
+Tip: You can use negative values for margins too.
+
+
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  margin-top: 100px;
+
+  margin-bottom: 100px;
+
+  margin-right: 150px;
+
+  margin-left: 80px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>Using individual margin properties</h2>
+
+
+
+<div>This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</div>
+
+
+
+
+
+
+
+Margin - Shorthand Property
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  margin: 25px 50px 75px 100px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>The margin shorthand property - 4 values</h2>
+
+
+
+<div>This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left margin of 100px.</div>
+
+
+
+
+
+if the margin property has three values:
+
+
+
+margin: 25px 50px 75px;
+
+top margin is 25px
+
+right and left margins are 50px
+
+bottom margin is 75px
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  margin: 25px 50px 75px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>The margin shorthand property - 3 values</h2>
+
+
+
+<div>This div element has a top margin of 25px, a right and left margin of 50px, and a bottom margin of 75px.</div>
+
+
+
+
+
+
+
+If the margin property has two values:
+
+        top bottom   left right    
+
+margin: 25px          50px;
+
+top and bottom margins are 25px
+
+right and left margins are 50px
+
+
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  margin: 25px 50px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>The margin shorthand property - 2 values</h2>
+
+
+
+<div>This div element has a top and bottom margin of 25px, and a right and left margin of 50px.</div>
+
+
+
+
+
+If the margin property has one value:
+
+
+
+margin: 25px;
+
+all four margins (top,right,bottom,left) are 25px
+
+
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  margin: 25px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>The margin shorthand property - 1 value</h2>
+
+
+
+<div>This div element has a top, bottom, left, and right margin of 25px.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The `auto` Value
+
+
+
+Setting the margin to `auto` will center an element horizontally within its container. The element will use the specified width, and the extra space will be evenly distributed between the left and right margins.
+
+
+
+<style>
+
+div {
+
+  width: 300px;
+
+  margin: auto;
+
+  border: 1px solid red;
+
+}
+
+</style>
+
+
+
+
+
+<h2>Use of margin: auto</h2>
+
+<p>You can set the margin property to auto to horizontally center the element within its container. The element will then take up the specified width, and the remaining space will be split equally between the left and right margins:</p>
+
+
+
+<div>
+
+This div will be horizontally centered because it has margin: auto;
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+All CSS Margin Properties
+
+Property            Description
+
+margin              A shorthand property for setting all the margin properties in one declaration
+
+margin-bottom       Sets the bottom margin of an element
+
+margin-left         Sets the left margin of an element
+
+margin-right        Sets the right margin of an element
+
+margin-top          Sets the top margin of an element
+
+
+
+
+
+
+
+
+
+
+
+Margin Collapse
+
+
+
+Top and bottom margins of elements sometimes combine into one margin, which is as large as the bigger of the two margins. This only happens with top and bottom margins, not left and right margins.
+
+
+
+Here’s an example:
+
+<style>
+
+h1 {
+
+  margin: 0 0 50px 50;
+
+}
+
+
+
+h2 {
+
+  margin: 20px 0 0 0;
+
+}
+
+</style>
+
+
+
+
+
+<p>In this example the h1 element has a bottom margin of 50px and the h2 element has a top margin of 20px. So, the vertical margin between h1 and h2 should have been 70px (50px + 20px). However, due to margin collapse, the actual margin ends up being 50px.</p>
+
+
+
+<h1>Heading 1</h1>
+
+<h2>Heading 2</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------->CSS NOTES<------------------------------------------------------------
+
+
+Padding in CSS
+
+  
+
+CSS padding properties create space around an element's content, inside its borders. With CSS, you can control the padding for each side of an element: top, right, bottom, and left.
+
+
+
+Individual Side Padding
+
+CSS lets you set padding for each side of an element using these properties:
+
+
+
+- `padding-top`
+
+- `padding-right`
+
+- `padding-bottom`
+
+- `padding-left`
+
+
+
+Each of these properties can have the following values:
+
+
+
+- `length`: Set a specific size like px, pt, cm, etc.
+
+- `%`: The padding is a percentage of the containing element's width.
+
+- `inherit`: The padding is copied from the parent element.
+
+
+
+Note: Negative values are not allowed for padding.
+
+
+
+
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  background-color: lightblue;
+
+  padding-top: 50px;
+
+  padding-right: 30px;
+
+  padding-bottom: 50px;
+
+  padding-left: 80px;
+
+}
+
+</style>
+
+
+
+
+
+<h2>Using individual padding properties</h2>
+
+
+
+<div>This div element has a top padding of 50px, a right padding of 30px, a bottom padding of 50px, and a left padding of 80px.</div>
+
+
+
+
+
+
+
+
+
+Padding - Shorthand Property
+
+
+
+If the padding property has four values:
+
+
+
+padding: 25px 50px 75px 100px;
+
+top padding is 25px
+
+right padding is 50px
+
+bottom padding is 75px
+
+left padding is 100px
+
+
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  padding: 25px 50px 75px 100px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>The padding shorthand property - 4 values</h2>
+
+
+
+<div>This div element has a top padding of 25px, a right padding of 50px, a bottom padding of 75px, and a left padding of 100px.</div>
+
+
+
+
+
+If the padding property has three values:
+
+
+
+padding: 25px 50px 75px;
+
+top padding is 25px
+
+right and left paddings are 50px
+
+bottom padding is 75px
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  padding: 25px 50px 75px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+<h2>The padding shorthand property - 3 values</h2>
+
+
+
+<div>This div element has a top padding of 25px, a right and left padding of 50px, and a bottom padding of 75px.</div>
+
+
+
+
+
+
+
+
+
+
+
+If the padding property has two values:
+
+
+
+padding: 25px 50px;
+
+top and bottom paddings are 25px
+
+right and left paddings are 50px
+
+
+
+
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  padding: 25px 50px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>The padding shorthand property - 2 values</h2>
+
+
+
+<div>This div element has a top and bottom padding of 25px, and a right and left padding of 50px.</div>
+
+
+
+
+
+
+
+
+
+If the padding property has one value:
+
+
+
+padding: 25px;
+
+all four paddings are 25px
+
+
+
+<style>
+
+div {
+
+  border: 1px solid black;
+
+  padding: 25px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>The padding shorthand property - 1 value</h2>
+
+
+
+<div>This div element has a top, bottom, left, and right padding of 25px.</div>
+
+
+
+
+
+
+
+Padding and Element Width
+
+
+
+The CSS `width` property sets the width of an element's content area, which is inside the padding, border, and margin (known as the box model).
+
+
+
+If you add padding to an element with a specified width, the total width of the element will increase. This can sometimes be a problem.
+
+
+
+<style>
+
+div.ex1 {
+
+  width: 300px;
+
+  background-color: yellow;
+
+}
+
+
+
+div.ex2 {
+
+  width: 300px;
+
+  padding: 25px;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>Padding and element width</h2>
+
+
+
+<div class="ex1">This div is 300px wide.</div>
+
+<br>
+
+
+
+<div class="ex2">The width of this div is 350px, even though it is defined as 300px in the CSS.</div>
+
+
+
+
+
+
+
+
+
+To keep the width at 300px regardless of padding, use the `box-sizing` property. This makes the element keep its specified width, so if you add padding, the content space inside will shrink instead of increasing the total width.
+
+<style>
+
+div.ex1 {
+
+  width: 300px;
+
+  background-color: yellow;
+
+}
+
+
+
+div.ex2 {
+
+  width: 300px;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background-color: lightblue;
+
+}
+
+</style>
+
+
+
+
+
+<h2>Padding and element width - with box-sizing</h2>
+
+
+
+<div class="ex1">This div is 300px wide.</div>
+
+<br>
+
+
+
+<div class="ex2">The width of this div remains at 300px, in spite of the 50px of total left and right padding, because of the box-sizing: border-box property.
+
+</div>
+
+
+
+
+
+All CSS Padding Properties
+
+Property            Description
+
+padding            A shorthand property for setting all the padding properties in one declaration
+
+padding-bottom    Sets the bottom padding of an element
+
+padding-left      Sets the left padding of an element
+
+padding-right     Sets the right padding of an element
+
+padding-top       Sets the top padding of an element
+
+
+
+
+
+
+----------------------------------------->CSS NOTES<----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+Setting Maximum Width (max-width)
+- The `max-width` property controls the largest width an element can have. You can set `max-width` in various units like:
+  - **Pixels (px)**: A specific number of pixels.
+  - **Centimeters (cm)**: Based on physical length.
+  - **Percentage (%)**: Relative to the size of the parent element.
+  
+- If you don't set `max-width`, the element's width can grow indefinitely.
+
+- In this example, we set a `<div>` element to a **max-width of 500px**. If the browser window becomes smaller than 500px, a horizontal scroll bar appears. To avoid this issue, use `max-width` to make sure the element adjusts better to smaller screens.
+
+- **Important Note**: If you set both `width` and `max-width`, the smaller value will take effect. For example, if `width` is 600px and `max-width` is 500px, the element will never grow beyond 500px.
+
+#### Example Code:
+```html
+<style>
+  div {
+    max-width: 500px;
+    height: 100px;
+    background-color: powderblue;
+  }
+</style>
+
+<h2>Set the max-width of an element</h2>
+<div>This div element has a height of 100px and a max-width of 500px.</div>
+<p>Resize the browser window to see the effect.</p>
+```
+
+#### All CSS Dimension Properties:
+- **height**: Defines the height of an element.
+- **max-height**: Limits how tall an element can be.
+- **max-width**: Limits how wide an element can be.
+- **min-height**: Sets the smallest height an element can have.
+- **min-width**: Sets the smallest width an element can have.
+- **width**: Defines the exact width of an element.
+
+---
+
+### CSS Box Model
+- The **CSS Box Model** is a way to understand how an element's size is calculated. Every HTML element is like a "box" made up of several parts:
+  1. **Content**: The actual text or image inside the element.
+  2. **Padding**: Space between the content and the border.
+  3. **Border**: A line surrounding the element.
+  4. **Margin**: Space between the border and other elements.
+
+#### Example Code:
+```html
+<style>
+  div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+</style>
+
+<h2>Showing the Box Model</h2>
+<p>The CSS box model is a box that surrounds each HTML element. It includes borders, padding, margins, and the actual content.</p>
+
+<div>This is the box's content. We've added 50px padding, 20px margin, and a 15px green border.</div>
+```
+
+In this example:
+- The content inside the `div` is surrounded by **50px of padding**, **a 15px green border**, and **20px of margin** between the `div` and other elements.
+
+---
+
+### Calculating the Total Width and Height:
+- Let's break down how the size of an element is calculated using the box model.
+
+#### Example Code:
+```html
+<style>
+  div {
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+  }
+</style>
+
+<h2>Calculate the total width:</h2>
+<div>The picture above is 350px wide. The total width of this element is also 350px. The total height of this element is 80px.</div>
+```
+
+Here’s how the total width and height are calculated:
+- **Total Width** = Content Width (320px) + Padding (20px) + Border (10px) = **350px**
+- **Total Height** = Content Height (50px) + Padding (20px) + Border (10px) = **80px**
+
+
+
+
+
+
+
+
+
+
+
+/* ### Text Spacing Properties*/
+
+1. **Text Indentation (`text-indent`)**  
+- **What it does**: This property is used to add space at the start of the first line of text, similar to starting a paragraph with a tab.
+  
+Example Code:
+```html
+<style>
+  p {
+    text-indent: 100px;
+  }
+</style>
+
+<h1>Using text-indent</h1>
+<p>It Jaipur</p>
+```
+- **Explanation**: The paragraph's first line will be indented by 100px from the left.
+
+---
+
+
+
+
+
+2. **Letter Spacing (`letter-spacing`)**  
+- **What it does**: This property controls the space between individual characters (letters) in a text.
+
+#### Example Code:
+```html
+<style>
+  h2 {
+    letter-spacing: 5px;
+  }
+
+  h3 {
+    letter-spacing: -2px;
+  }
+</style>
+
+<h1>Using letter-spacing</h1>
+<h2>This is heading 1</h2>
+<h3>This is heading 2</h3>
+```
+- **Explanation**: 
+  - `h2` has extra space (5px) between characters.
+  - `h3` has reduced space (-2px), making the letters closer together.
+
+---
+
+
+
+
+
+3. **Line Height (`line-height`)**  
+- **What it does**: This property controls the space between lines of text, affecting how "tall" the lines appear.
+
+#### Example Code:
+```html
+<style>
+  p.small {
+    line-height: 0.7;
+  }
+
+  p.big {
+    line-height: 1.8;
+  }
+</style>
+
+<p class="small">This is a paragraph with a smaller line-height.<br>This is another line with a smaller line-height.</p>
+
+<p class="big">This is a paragraph with a bigger line-height.<br>This is another line with a bigger line-height.</p>
+```
+- **Explanation**: 
+  - `small` class makes the lines of text closer together (`line-height: 0.7`).
+  - `big` class makes the lines more spaced out (`line-height: 1.8`).
+
+---
+
+
+
+4. **Word Spacing (`word-spacing`)**  
+- **What it does**: This property adjusts the space between words in a paragraph.
+
+#### Example Code:
+```html
+<style>
+  p.one {
+    word-spacing: 10px;
+  }
+
+  p.two {
+    word-spacing: -2px;
+  }
+</style>
+
+<p class="one">This is a paragraph with larger word spacing.</p>
+<p class="two">This is a paragraph with smaller word spacing.</p>
+```
+- **Explanation**: 
+  - `one` class adds extra space between words (`word-spacing: 10px`).
+  - `two` class reduces the space between words (`word-spacing: -2px`).
+
+---
+
+5. **White Space (`white-space`)**  
+- **What it does**: This property controls how text handles spaces and line breaks. For example, you can prevent text from wrapping onto a new line.
+
+#### Example Code:
+```html
+<style>
+  p {
+    white-space: nowrap;
+  }
+</style>
+
+<h1>Using white-space</h1>
+<p>
+  This is some text that will not wrap. This is some text that will not wrap. 
+  This is some text that will not wrap. This is some text that will not wrap.
+</p>
+```
+- **Explanation**: The text inside the paragraph will stay on the same line, even if it overflows, because of the `white-space: nowrap` property.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+ /* text-shadow */
+              x     y     blur    color
+ text-shadow: 2px   2px    2px     red;
+ <style>
+ h1 {
+   color: white;
+   text-shadow: 3px 3px 4px #000000;
+ }
+ </style>
+ 
+ <h1>Text-shadow effect!</h1>
+ 
+ 
+ <style>
+ h1 {
+   color: white;
+   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+ }
+ </style>
+ 
+ <h1>Text-shadow effect!</h1>
+
+
+
+
+ /* box-shadow */
+box-shadow: x-offset y-offset blur-radius color;
+```
+- **x-offset**: Moves the shadow horizontally (right if positive, left if negative).
+- **y-offset**: Moves the shadow vertically (down if positive, up if negative).
+- **blur-radius**: Controls how blurred the shadow is.
+- **color**: Sets the color of the shadow.
+
+#### Example 1:
+```html
+<style>
+  div {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    box-shadow: 2px 2px 2px red;
+  }
+</style>
+
+<div>Box-shadow effect!</div>
+```
+- **Explanation**: The shadow is 2px to the right, 2px down, with a 2px blur and a red color.
+
+#### Example 2:
+```html
+<style>
+  div {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    box-shadow: 3px 3px 4px black;
+  }
+</style>
+
+<div>Box-shadow effect!</div>
+```
+- **Explanation**: The shadow is 3px to the right, 3px down, with a 4px blur and a black color.
+
+#### Example 3 (Multiple Shadows):
+```html
+<style>
+  div {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+</style>
+
+<div>Box-shadow effect!</div>
+```
+- **Explanation**: 
+  - The first shadow is 1px right, 1px down, with a 2px blur and black color.
+  - The second shadow is a blue glow with a 25px blur.
+  - The third shadow is a dark blue glow with a 5px blur.
+
+
+
+
+
+
+  
+  /* ### Text Alignment */
+
+The `text-align` property is used to control how text is positioned horizontally on a webpage.
+
+- Text can be aligned in four ways: left, right, center, or justified.
+  
+In the example below, the text is center-aligned, left-aligned, and right-aligned:
+  
+```html
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  h3 {
+    text-align: right;
+  }
+</style>
+
+<h1>Heading 1 (center)</h1>
+<h2>Heading 2 (left)</h2>
+<h3>Heading 3 (right)</h3>
+
+<p>The three headings above are aligned center, left, and right.</p>
+```
+- **Explanation**:
+  - `h1` is aligned to the center of the page.
+  - `h2` is aligned to the left (this is the default for text in most languages).
+  - `h3` is aligned to the right.
+
+When you set `text-align` to "justify," the lines of text stretch so that both the left and right edges are straight, like in magazines and newspapers.
+
+#### Example of Justified Text:
+```html
+<style>
+  div {
+    border: 1px solid black;
+    padding: 10px;
+    width: 150px;
+    height: 200px;
+    text-align: justify;
+  }
+</style>
+
+<div>
+  Welcome to IT Center of Kota. Welcome to IT Center of Kota. Welcome to IT Center of Kota. Welcome to IT Center of Kota. Welcome to IT Center of Kota.
+</div>
+```
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+ /* CSS Fonts */
+
+ <style>
+
+ body {
+
+   font-family: 'Brush Script MT', cursive;
+
+ }
+
+ </style>
+
+ </head>
+
+ <body>
+
+ 
+
+ <h1>Lorem ipsum dolor sit amet</h1>
+
+ 
+
+ <p>Lorem ipsum dolor sit amet.</p>
+
+ <p>0 1 2 3 4 5 6 7 8 9</p>
+
+ 
+
+ 
+
+ 
+
+ /* ex-2 */
+
+ 
+
+ <style>
+
+ .p1 {
+
+   font-family: "Times New Roman", Times, serif;
+
+ }
+
+ 
+
+ .p2 {
+
+   font-family: Arial, Helvetica, sans-serif;
+
+ }
+
+ 
+
+ .p3 {
+
+   font-family: "Lucida Console", "Courier New", monospace;
+
+ }
+
+ </style>
+
+ </head>
+
+ <body>
+
+ 
+
+ <h1>CSS font-family</h1>
+
+ <p class="p1">This is a paragraph, shown in the Times New Roman font.</p>
+
+ <p class="p2">This is a paragraph, shown in the Arial font.</p>
+
+ <p class="p3">This is a paragraph, shown in the Lucida Console font.</p>
+
+ 
+
+ 
+
+ font-family: 'Fauna One', serif;
+
+ 
+
+ 
+
+                                   /* font-style */
+
+ <style>
+
+ p.normal {
+
+   font-style: normal;
+
+ }
+
+ 
+
+ p.italic {
+
+   font-style: italic;
+
+ }
+
+ 
+
+ p.oblique {
+
+   font-style: oblique;
+
+ }
+
+ </style>
+
+ 
+
+ <h1>The font-style property</h1>
+
+ 
+
+ <p class="normal">This is a paragraph in normal style.</p>
+
+ <p class="italic">This is a paragraph in italic style.</p>
+
+ <p class="oblique">This is a paragraph in oblique style.</p>
+
+ 
+
+
+ 
+
+                                         /* font-weight */
+
+ <style>
+
+ p.normal {
+
+   font-weight:
+
+ }
+
+ 
+
+ p.light {
+
+   font-weight: lighter;
+
+ }
+
+ 
+
+ p.thick {
+
+   font-weight: bold;
+
+ }
+
+ 
+
+ p.thicker {
+
+   font-weight: 900;
+
+ }
+
+ </style>
+
+ 
+
+ <h1>The font-weight property</h1>
+
+ 
+
+ <p class="normal">This is a paragraph.</p>
+
+ <p class="light">This is a paragraph.</p>
+
+ <p class="thick">This is a paragraph.</p>
+
+ <p class="thicker">This is a paragraph.</p>
+
+ 
+
+ 
+
+ 
+
+ 
+
+ <style>
+
+ p.normal {
+
+   font-variant: normal;
+
+ }
+
+ 
+
+ p.small {
+
+   font-variant: ;
+
+ }
+
+ </style>
+
+ 
+
+ <h1>The font-variant property</h1>
+
+ 
+
+ <p class="normal">My name is Hege Refsnes.</p>
+
+ <p class="small">My name is Hege Refsnes.</p>
+
+ 
+
+ 
+
+ 
+
+                                           /* font-size */
+
+ <style>
+
+ h1 {
+
+   font-size: 40px;
+
+ }
+
+ 
+
+ h2 {
+
+   font-size: 30px;
+
+ }
+
+ 
+
+ p {
+
+   font-size: 14px;
+
+ }
+
+ </style>
+
+ 
+
+ 
+
+ <h1>This is heading 1</h1>
+
+ <h2>This is heading 2</h2>
+
+ <p>This is a paragraph.</p>
+
+ <p>This is another paragraph.</p>
+
+ 
+
+ 
+
+ Set Font Size With Em
+
+ 1em is 16px.
+
+ <style>
+
+ h1 {
+
+   font-size: 2.5em; /* 40px/16=2.5em */
+
+ }
+
+ 
+
+ 
+
+ </style>
+
+ 
+
+ <h1>This is heading 1</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Styling Links */
+
+  a:link - a normal, unvisited link
+
+  a:visited - a link the user has visited
+
+  a:hover - a link when the user mouses over it
+
+  a:active - a link the moment it is clicked
+
+  
+
+  
+
+  <style>
+
+  /* unvisited link */
+
+  a:link {
+
+    color: red;
+
+    text-decoration: none;
+
+  }
+
+  
+
+  /* visited link */
+
+  a:visited {
+
+    color: green;
+
+    text-decoration: none;
+
+  }
+
+  
+
+  /* mouse over link */
+
+  a:hover {
+
+    color: hotpink;
+
+    text-decoration: underline;
+
+  }
+
+  
+
+  /* selected link */
+
+  a:active {
+
+    color: blue;
+
+  }
+
+  </style>
+
+  
+
+  <h2>Styling a link depending on state</h2>
+
+  
+
+  <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+
+  <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+
+  <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+  
+
+  
+
+  /* A link styled as a button */
+
+  <style>
+
+  a:link, a:visited {
+
+    background-color: #f44336;
+
+    color: white;
+
+    padding: 14px 25px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+  }
+
+  
+
+  a:hover, a:active {
+
+    background-color: red;
+
+  }
+
+  </style>
+
+  
+
+  <h2>Link Button</h2>
+
+  
+
+  <p>A link styled as a button:</p>
+
+  <a href="default.asp" target="_blank">This is a link</a>
+
+  
+
+  
+
+  
+
+  
+
+                            /* Link Button */
+
+  <style>
+
+  a:link, a:visited {
+
+    background-color: white;
+
+    color: black;
+
+    border: 2px solid green;
+
+    padding: 10px 20px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+  }
+
+  
+
+  a:hover, a:active {
+
+    background-color: green;
+
+    color: white;
+
+  }
+
+  </style>
+
+  
+
+  <h2>Link Button</h2>
+
+  
+
+  <a href="default.asp" target="_blank">This is a link</a>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+                                      /* The cursor Property */
+
+  
+
+  <h2>The cursor Property</h2>
+
+  
+
+  <p>Mouse over the words to change the cursor.</p>
+
+  <span style="cursor:auto">auto</span><br>
+
+  <span style="cursor:crosshair">crosshair</span><br>
+
+  <span style="cursor:default">default</span><br>
+
+  <span style="cursor:e-resize">e-resize</span><br>
+
+  <span style="cursor:help">help</span><br>
+
+  <span style="cursor:move">move</span><br>
+
+  <span style="cursor:n-resize">n-resize</span><br>
+
+  <span style="cursor:ne-resize">ne-resize</span><br>
+
+  <span style="cursor:nw-resize">nw-resize</span><br>
+
+  <span style="cursor:pointer">pointer</span><br>
+
+  <span style="cursor:progress">progress</span><br>
+
+  <span style="cursor:s-resize">s-resize</span><br>
+
+  <span style="cursor:se-resize">se-resize</span><br>
+
+  <span style="cursor:sw-resize">sw-resize</span><br>
+
+  <span style="cursor:text">text</span><br>
+
+  <span style="cursor:w-resize">w-resize</span><br>
+
+  <span style="cursor:wait">wait</span><br>
+
+  
+
+  
+-----------------------------------------------------------------------------------------------------------------------------------
+  
+
+
+   
+  
+      /* Styling Lists */
+
+      <style>
+
+      ol {
+    
+        background: #ff9999;
+    
+        padding: 20px;
+    
+      }
+    
+      
+    
+      ol li {
+    
+        background: #ffe5e5;
+    
+        color: darkred;
+    
+        padding: 5px;
+    
+        margin-left: 35px;
+    
+      }
+    
+      
+    
+      
+    
+      ul {
+    
+        background: #3399ff;
+    
+        padding: 20px;
+    
+      }
+    
+      
+    
+      
+    
+      
+    
+      ul li {
+    
+        background: #cce5ff;
+    
+        color: darkblue;
+    
+        margin: 5px;
+    
+      }
+    
+      </style>
+    
+      
+    
+      
+    
+      <h1>Styling Lists With Colors</h1>
+    
+      
+    
+      <ol>
+    
+        <li>Coffee</li>
+    
+        <li>Tea</li>
+    
+        <li>Coca Cola</li>
+    
+      </ol>
+    
+      
+    
+      <ul>
+    
+        <li>Coffee</li>
+    
+        <li>Tea</li>
+    
+        <li>Coca Cola</li>
+    
+      </ul>
+    
+      
+    
+      
+    
+                                          /* list-style-type */
+    
+      <style>
+    
+      ul.a {
+    
+        list-style-type: none;
+    
+      }
+    
+      
+    
+      ul.b {
+    
+        list-style-type: square;
+    
+      }
+    
+      
+    
+      ol.c {
+    
+        list-style-type: upper-roman;
+    
+      }
+    
+      
+    
+      ol.d {
+    
+        list-style-type: lower-alpha;
+    
+      }
+    
+      </style>
+    
+      </head>
+    
+      <body>
+    
+      
+    
+      <h2>The list-style-type Property</h2>
+    
+      
+    
+      <p>Example of unordered lists:</p>
+    
+      <ul class="a">
+    
+        <li>Coffee</li>
+    
+        <li>Tea</li>
+    
+        <li>Coca Cola</li>
+    
+      </ul>
+    
+      
+    
+      <ul class="b">
+    
+        <li>Coffee</li>
+    
+        <li>Tea</li>
+    
+        <li>Coca Cola</li>
+    
+      </ul>
+    
+      
+    
+      <p>Example of ordered lists:</p>
+    
+      <ol class="c">
+    
+        <li>Coffee</li>
+    
+        <li>Tea</li>
+    
+        <li>Coca Cola</li>
+    
+      </ol>
+    
+      
+    
+      <ol class="d">
+    
+        <li>Coffee</li>
+    
+        <li>Tea</li>
+    
+        <li>Coca Cola</li>
+    
+      </ol>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      /* list-style-image */
+    
+      <style>
+    
+      ul {
+    
+        list-style-image: url('sqpurple.gif');
+    
+      }
+    
+      </style>
+    
+      </head>
+    
+      <body>
+    
+      
+    
+      <h2>The list-style-image Property</h2>
+    
+      
+    
+      <p>The list-style-image property specifies an image as the list item marker:</p>
+    
+      
+    
+      <ul>
+    
+        <li>Coffee</li>
+    
+        <li>Tea</li>
+    
+        <li>Coca Cola</li>
+    
+      </ul>
+    
+      
+    
+      
+    
+      
+    
+                                          /* list-style-position */
+    
+      
+    
+      <style>
+    
+      ul.a {
+    
+        list-style-position: outside;
+    
+      }
+    
+      
+    
+      ul.b {
+    
+        list-style-position: inside;
+    
+      }
+    
+      </style>
+    
+      <ul class="a">
+    
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta eveniet repudiandae sit? Possimus error iusto, ex hic aliquam vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio pariatur aut dolor maxime, corporis, in, expedita aliquam vel doloribus deleniti sequi possimus similique. Veritatis harum ab vel voluptatem cupiditate. Perferendis ab id corporis, consectetur obcaecati voluptate! Voluptas deleniti velit laborum error consequatur, pariatur repellat quae quidem harum. Placeat, perspiciatis!</li>
+    
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta eveniet repudiandae sit? Possimus error iusto, ex hic aliquam vitae.</li>
+    
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta eveniet repudiandae sit? Possimus error iusto, ex hic aliquam vitae.</li>
+    
+      </ul>
+    
+      
+    
+      <ul class="b">
+    
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta eveniet repudiandae sit? Possimus error iusto, ex hic aliquam vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illo, iure optio voluptas ad eaque quos quas, veniam sapiente iusto aut minus esse hic accusantium enim debitis assumenda tenetur. Quibusdam minus placeat fuga sequi obcaecati voluptas, non voluptate cum perferendis a omnis aliquam quasi perspiciatis laborum quia earum et amet?</li>
+    
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta eveniet repudiandae sit? Possimus error iusto, ex hic aliquam vitae.</li>
+    
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta eveniet repudiandae sit? Possimus error iusto, ex hic aliquam vitae.</li>
+    
+      </ul>
+    
+      
+    
+      
+    
+      
+    
+      ----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+        /* CSS Tables */
+
+  border  Sets all the border properties in one declaration
+
+  border-collapse Specifies whether or not table borders should be collapsed
+
+  border-spacing  Specifies the distance between the borders of adjacent cells
+
+  caption-side  Specifies the placement of a table caption
+
+  empty-cells Specifies whether or not to display borders and background on empty cells in a table
+
+  table-layout  Sets the layout algorithm to be used for a table
+
+  
+
+  
+
+  
+
+  /* border */
+
+  <style>
+
+  table, th, td {
+
+    border: 1px solid;
+
+  }
+
+  
+
+  table {
+
+    width: 100%;
+
+  }
+
+  </style>
+
+  
+
+  <h2>Full-width Table</h2>
+
+  
+
+  <table>
+
+    <tr>
+
+      <th>Firstname</th>
+
+      <th>Lastname</th>
+
+    </tr>
+
+    <tr>
+
+      <td>Peter</td>
+
+      <td>Griffin</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Lois</td>
+
+      <td>Griffin</td>
+
+    </tr>
+
+  </table>
+
+  
+
+  
+
+  
+
+  /* border-collapse */
+
+  the table borders should be collapsed into a single border:
+
+  <style>
+
+  table, td, th {
+
+    border: 1px solid;
+
+  }
+
+  
+
+  table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <h2>Let the table borders collapse</h2>
+
+  
+
+  <table>
+
+    <tr>
+
+      <th>Firstname</th>
+
+      <th>Lastname</th>
+
+    </tr>
+
+    <tr>
+
+      <td>Peter</td>
+
+      <td>Griffin</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Lois</td>
+
+      <td>Griffin</td>
+
+    </tr>
+
+  </table>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  /* Width and Height */
+
+  <style>
+
+  table, td, th {
+
+    border: 1px solid black;
+
+  }
+
+  
+
+  table {
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+  }
+
+  
+
+  th {
+
+    height: 70px;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <h2>The width and height Properties</h2>
+
+  
+
+  <p>Set the width of the table, and the height of the table header row:</p>
+
+  
+
+  <table>
+
+    <tr>
+
+      <th>Firstname</th>
+
+      <th>Lastname</th>
+
+      <th>Savings</th>
+
+    </tr>
+
+    <tr>
+
+      <td>Peter</td>
+
+      <td>Griffin</td>
+
+      <td>$100</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Lois</td>
+
+      <td>Griffin</td>
+
+      <td>$150</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Joe</td>
+
+      <td>Swanson</td>
+
+      <td>$300</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Cleveland</td>
+
+      <td>Brown</td>
+
+      <td>$250</td>
+
+    </tr>
+
+  </table>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  /* text-align */
+
+  <style>
+
+  table, td, th {
+
+    border: 1px solid black;
+
+  }
+
+  
+
+  table {
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+  }
+
+  
+
+  td {
+
+    text-align: center;
+
+  }
+
+  </style>
+
+  
+
+  <h2>The text-align Property</h2>
+
+  
+
+  <p>This property sets the horizontal alignment (like left, right, or center) of the content in th or td.</p>
+
+  
+
+  <table>
+
+    <tr>
+
+      <th>Firstname</th>
+
+      <th>Lastname</th>
+
+      <th>Savings</th>
+
+    </tr>
+
+    <tr>
+
+      <td>Peter</td>
+
+      <td>Griffin</td>
+
+      <td>$100</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Lois</td>
+
+      <td>Griffin</td>
+
+      <td>$150</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Joe</td>
+
+      <td>Swanson</td>
+
+      <td>$300</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Cleveland</td>
+
+      <td>Brown</td>
+
+      <td>$250</td>
+
+    </tr>
+
+  </table>
+
+  
+
+  
+
+  
+
+  /* vertical-align */
+
+  <style>
+
+  table, td, th {
+
+    border: 1px solid black;
+
+  }
+
+  
+
+  table {
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+  }
+
+  
+
+  td {
+
+    height: 50px;
+
+    vertical-align: bottom;
+
+  }
+
+  </style>
+
+  
+
+  <h2>The vertical-align Property</h2>
+
+  
+
+  <p>This property sets the vertical alignment (like top, bottom, or middle) of the content in th or td.</p>
+
+  
+
+  <table>
+
+    <tr>
+
+      <th>Firstname</th>
+
+      <th>Lastname</th>
+
+      <th>Savings</th>
+
+    </tr>
+
+    <tr>
+
+      <td>Peter</td>
+
+      <td>Griffin</td>
+
+      <td>$100</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Lois</td>
+
+      <td>Griffin</td>
+
+      <td>$150</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Joe</td>
+
+      <td>Swanson</td>
+
+      <td>$300</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Cleveland</td>
+
+      <td>Brown</td>
+
+      <td>$250</td>
+
+    </tr>
+
+  </table>
+
+  
+
+  
+
+  
+
+                                    /* table style */
+
+  <style>
+
+  table {
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+  }
+
+  
+
+  th, td {
+
+    padding: 8px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+
+  }
+
+  
+
+  tr:hover {background-color: coral;}
+
+  </style>
+
+  
+
+  <h2>Hoverable Table</h2>
+
+  
+
+  <p>Move the mouse over the table rows to see the effect.</p>
+
+  
+
+  <table>
+
+    <tr>
+
+      <th>First Name</th>
+
+      <th>Last Name</th>
+
+      <th>Points</th>
+
+    </tr>
+
+    <tr>
+
+      <td>Peter</td>
+
+      <td>Griffin</td>
+
+      <td>$100</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Lois</td>
+
+      <td>Griffin</td>
+
+      <td>$150</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Joe</td>
+
+      <td>Swanson</td>
+
+      <td>$300</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Cleveland</td>
+
+      <td>Brown</td>
+
+      <td>$250</td>
+
+    </tr>
+
+  </table>
+
+  
+
+  
+
+  
+
+  /* example-2 */
+
+  <style>
+
+  table {
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+  }
+
+  
+
+  th, td {
+
+    text-align: left;
+
+    padding: 8px;
+
+  }
+
+  
+
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  
+
+  th {
+
+    background-color: #04AA6D;
+
+    color: white;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <h2>Colored Table Header</h2>
+
+  
+
+  <table>
+
+    <tr>
+
+      <th>Firstname</th>
+
+      <th>Lastname</th>
+
+      <th>Savings</th>
+
+    </tr>
+
+    <tr>
+
+      <td>Peter</td>
+
+      <td>Griffin</td>
+
+      <td>$100</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Lois</td>
+
+      <td>Griffin</td>
+
+      <td>$150</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Joe</td>
+
+      <td>Swanson</td>
+
+      <td>$300</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Cleveland</td>
+
+      <td>Brown</td>
+
+      <td>$250</td>
+
+  </tr>
+
+  </table>
+
+  
+
+  
+
+  
+
+  /* overflow */
+
+  <div style="overflow-x:auto;">
+
+  
+
+  <table>
+
+  ... table content ...
+
+  </table>
+
+  
+
+  </div>
+
+  
+
+  
+  
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+ /* display Property */
+
+  
+
+  /* display inline; */
+
+  <style>
+
+  li {
+
+    display: inline;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <p>Display a list of links as a horizontal menu:</p>
+
+  
+
+  <ul>
+
+    <li><a href=""" target="_blank">HTML</a></li>
+
+    <li><a href="" target="_blank">CSS</a></li>
+
+    <li><a href="" target="_blank">JavaScript</a></li>
+
+  </ul>
+
+  
+
+  
+
+  
+
+  /* display block */
+
+  <style>
+
+  span {
+
+    display: block;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <h1>Display span elements as block elements</h1>
+
+  
+
+  <span>A display property with</span> <span>a value of "block" results in</span> <span>a line break between each span elements.</span>
+
+  
+
+  /* ex-2 */
+
+  <style>
+
+  a {
+
+    display: block;
+
+  }
+
+  </style>
+
+  
+
+  <h1>Display links as block elements</h1>
+
+  
+
+  <a href="/html/default.asp" target="_blank">HTML</a>
+
+  <a href="/css/default.asp" target="_blank">CSS</a>
+
+  <a href="/js/default.asp" target="_blank">JavaScript</a>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <style>
+
+  h1.hidden {
+
+    display: none;
+
+  }
+
+  </style>
+
+  
+
+  <h1>This is a visible heading</h1>
+
+  <h1 class="hidden">This is a hidden heading</h1>
+
+  <p>Notice that the h1 element with display: none; does not take up any space.</p>
+
+  
+
+  
+
+  
+
+  <style>
+
+  h1.hidden {
+
+    visibility: hidden;
+
+  }
+
+  </style>
+
+  
+
+  <h1>This is a visible heading</h1>
+
+  <h1 class="hidden">This is a hidden heading</h1>
+
+  <p>Notice that the hidden heading still takes up space.</p>
+
+  
+
+  
+
+  /* flex value are use parent element */
+
+  <style>
+
+  ul {
+
+    display: flex;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <p>Display a list of links as a horizontal menu:</p>
+
+  
+
+  <ul>
+
+    <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+
+    <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+
+    <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+
+  </ul>
+
+  
+
+  
+
+  
+
+  /* The position Property */
+
+  /* The position property specifies the type of positioning method used for an element.
+
+  
+
+  There are five different position values:
+
+  
+
+  static
+
+  relative
+
+  fixed
+
+  absolute
+
+  sticky */
+
+  
+
+  /* static
+
+  HTML elements are positioned static by default.
+
+  Static positioned elements are not affected by the top, bottom, left, and right properties. */
+
+  
+
+  
+
+  
+
+                                        /* position fixed */
+
+  <style>
+
+  div.fixed {
+
+    position: fixed;
+
+    bottom: 0;
+
+    right: 0;
+
+    width: 300px;
+
+    border: 3px solid #73AD21;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <h2>position: fixed;</h2>
+
+  
+
+  <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+
+  
+
+  <div class="fixed">
+
+  This div element has position: fixed;
+
+  </div>
+
+  
+
+  
+
+  
+
+  /* position relative and absolute */
+
+  <style>
+
+  div.relative {
+
+    position: relative;
+
+    width: 400px;
+
+    height: 200px;
+
+    border: 3px solid #73AD21;
+
+  } 
+
+  
+
+  div.absolute {
+
+    position: absolute;
+
+    top: 80px;
+
+    right: 0;
+
+    width: 200px;
+
+    height: 100px;
+
+    border: 3px solid #73AD21;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <h2>position: absolute;</h2>
+
+  
+
+  <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+
+  
+
+  <div class="relative">This div element has position: relative;
+
+    <div class="absolute">This div element has position: absolute;</div>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  /* position sticky */
+
+  <style>
+
+  div.sticky {
+
+    position: -webkit-sticky;
+
+    position: sticky;
+
+    top: 0;
+
+    padding: 5px;
+
+    background-color: #cae8ca;
+
+    border: 2px solid #4CAF50;
+
+  }
+
+  </style>
+
+  </head>
+
+  <body>
+
+  
+
+  <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+
+  
+
+  <div class="sticky">I am sticky!</div>
+
+  
+
+  <div style="padding-bottom:2000px">
+
+    <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+
+    <p>Scroll back up to remove the stickyness.</p>
+
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+  </div>
+
+  
+
+  
+  
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+ /* z-index  */
+
+  /* When elements are positioned, they can overlap other elements. */
+
+  <style>
+
+img {
+
+  position: absolute;
+
+  left: 0px;
+
+  top: 0px;
+
+  z-index: -1;
+
+}
+
+</style>
+
+<h1>This is a heading</h1>
+
+<img src="img_tree.png">
+
+<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+  
+
+/* Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display: flex elements). */
+
+
+
+ /* example */
+
+<style>
+
+.container {
+
+  position: relative;
+
+}
+
+
+
+.black-box {
+
+  position: relative;
+
+  z-index: 1;
+
+  border: 2px solid black;
+
+  height: 100px;
+
+  margin: 30px;
+
+}
+
+
+
+.gray-box {
+
+  position: absolute;
+
+  z-index: 3; /* gray box will be above both green and black box */
+
+  background: lightgray;
+
+  height: 60px;  
+
+  width: 70%;
+
+  left: 50px;
+
+  top: 50px;
+
+}
+
+
+
+.green-box {
+
+  position: absolute;
+
+  z-index: 2; /* green box will be above black box */
+
+  background: lightgreen;
+
+  width: 35%;
+
+  left: 270px;
+
+  top: -15px;
+
+  height: 100px;
+
+}
+
+</style>
+
+
+
+<h1>Z-index Example</h1>
+
+
+
+<p>An element with greater stack order is always above an element with a lower stack order.</p>
+
+
+
+<div class="container">
+
+  <div class="black-box">Black box (z-index: 1)</div>
+
+  <div class="gray-box">Gray box (z-index: 3)</div>
+
+  <div class="green-box">Green box (z-index: 2)</div>
+
+</div> 
+
+  
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+/* CSS Overflow */
+
+/* The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+
+
+The overflow property has the following values:
+
+
+
+visible - Default. The overflow is not clipped. The content renders outside the element's box
+
+hidden - The overflow is clipped, and the rest of the content will be invisible
+
+scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+
+auto - Similar to scroll, but it adds scrollbars only when necessary  */
+
+        /* Note: The overflow property only works for block elements with a specified height. */
+
+  
+
+        
+
+/* visible */
+
+<style>
+
+div {
+
+background-color: coral;
+
+width: 200px;
+
+height: 65px;
+
+border: 1px solid;
+
+overflow: visible;
+
+}
+
+</style>
+
+
+
+<h2>Overflow: visible</h2>
+
+
+
+<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
+
+
+
+<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>  
+
+  
+
+
+
+  /*Overflow: hidden */
+
+  <style>
+
+div {
+
+  background-color: coral;
+
+  width: 200px;
+
+  height: 65px;
+
+  border: 1px solid black;
+
+  overflow: hidden;
+
+}
+
+</style>
+
+
+
+<p>With the hidden value, the overflow is clipped, and the rest of the content is hidden:</p>
+
+<p>Try to remove the overflow property to understand how it works.</p>
+
+
+
+<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+  
+
+  
+
+  /*Overflow: scroll  */
+
+  <style>
+
+  div {
+
+    background-color: coral;
+
+    width: 200px;
+
+    height: 100px;
+
+    border: 1px solid black;
+
+    overflow: scroll;
+
+  }
+
+  </style>
+
+
+
+  <p>Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):</p>
+
+  
+
+  <div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+
+
+/*Overflow: auto  */
+
+<style>
+
+div {
+
+  background-color: coral;
+
+  width: 200px;
+
+  height: 65px;
+
+  border: 1px solid black;
+
+  overflow: auto;
+
+}
+
+</style>
+
+
+
+ 
+
+<p>The auto value is similar to scroll, only it add scrollbars when necessary:</p>
+
+
+
+<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+
+
+
+
+
+
+/* overflow-x and overflow-y */
+
+<style>
+
+div {
+
+  background-color: coral;
+
+  width: 200px;
+
+  height: 65px;
+
+  border: 1px solid black;
+
+  overflow-x: hidden;
+
+  overflow-y: scroll;
+
+}
+
+</style>
+
+
+
+<p>You can also change the overflow of content horizontally or vertically.</p>
+
+<p>overflow-x specifies what to do with the left/right edges of the content.</p>
+
+<p>overflow-y specifies what to do with the top/bottom edges of the content.</p>
+
+
+
+<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+
+
+
+
+/*  */
+
+
+
+/* CSS Layout - float and clear */
+
+/* The float property is used for positioning and formatting content e.g. let an image float left to the text in a container. */
+
+
+
+
+
+/* Float Right */
+
+<style>
+
+img {
+
+  float: right;
+
+}
+
+</style>
+
+<p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+
+
+<p><img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+
+
+
+
+
+
+/* Float Left */
+
+<style>
+
+img {
+
+  float: left;
+
+}
+
+</style>
+
+<p>In this example, the image will float to the left in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+
+
+<p><img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-right:15px;">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+
+
+
+
+/* Float None */
+
+<style>
+
+img {
+
+  float: none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h2>Float None</h2>
+
+
+
+<p>In this example, the image will be displayed just where it occurs in the text (float: none;).</p>
+
+
+
+<p><img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+
+
+
+
+
+
+/* Float Next To Each Other */
+
+<style>
+
+div {
+
+  
+  padding: 15px; 
+  float: left;
+
+}
+
+
+
+.div1 {
+
+  background: red;
+
+}
+
+
+
+.div2 {
+
+  background: yellow;
+
+}
+
+
+
+.div3 {
+
+  background: green;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h2>Float Next To Each Other</h2>
+
+
+
+<p>In this example, the three divs will float next to each other.</p>
+
+
+
+<div class="div1">Div 1</div>
+
+<div class="div2">Div 2</div>
+
+<div class="div3">Div 3</div>
+
+
+
+
+
+/* clear Property */
+
+<style>
+
+.div1 {
+
+  float: left;
+
+  padding: 10px;
+
+  border: 3px solid #73AD21;
+
+}
+
+
+
+.div2 {
+
+  padding: 10px;
+
+  border: 3px solid red;
+
+}
+
+
+
+.div3 {
+
+  float: left;
+
+  padding: 10px;  
+
+  border: 3px solid #73AD21;
+
+}
+
+
+
+.div4 {
+
+  padding: 10px;
+
+  border: 3px solid red;
+
+  clear: left;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h2>Without clear</h2>
+
+<div class="div1">div1</div>
+
+<div class="div2">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
+
+<br><br>
+
+
+
+<h2>With clear</h2>
+
+<div class="div3">div3</div>
+
+<div class="div4">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+/*  The display Property*/
+
+<style>
+
+span.a {
+
+  display: inline; /* the default for span */
+
+  width: 100px;
+
+  height: 100px;
+
+  padding: 5px;
+
+  border: 1px solid blue;  
+
+  background-color: yellow; 
+
+}
+
+
+
+span.b {
+
+  display: inline-block;
+
+  width: 100px;
+
+  height: 100px;
+
+  padding: 5px;
+
+  border: 1px solid blue;    
+
+  background-color: yellow; 
+
+}
+
+
+
+span.c {
+
+  display: block;
+
+  width: 100px;
+
+  height: 100px;
+
+  padding: 5px;
+
+  border: 1px solid blue;    
+
+  background-color: yellow; 
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>The display Property</h1>
+
+
+
+<h2>display: inline</h2>
+
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+
+
+<h2>display: inline-block</h2>
+
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+
+
+<h2>display: block</h2>
+
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+
+
+
+
+
+/* */
+
+<style>
+
+ul {
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background-color: #333;
+
+}
+
+
+
+li {
+
+  float: left;
+
+}
+
+
+
+li a {
+
+  display: inline-block;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 14px 16px;
+
+  text-decoration: none;
+
+}
+
+
+
+li a:hover {
+
+  background-color: #111;
+
+}
+
+
+
+.active {
+
+  background-color: red;
+
+}
+
+</style>
+
+
+
+<ul>
+
+  <li><a href="#home" class="active">Home</a></li>
+
+  <li><a href="#news">News</a></li>
+
+  <li><a href="#contact">Contact</a></li>
+
+  <li><a href="#about">About</a></li>
+
+</ul>
+
+ 
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+/* What are Pseudo-classes? */
+
+A pseudo-class defines a specific state of an element.
+
+Examples of usage:
+- Style an element when the user hovers over it.
+- Style visited and unvisited links differently.
+- Style an element when it is in focus.
+
+/* Selector Examples */
+
+:active a:active        /* Selects the active link */
+:checked input:checked  /* Selects every checked <input> element */
+:disabled input:disabled /* Selects every disabled <input> element */
+:first-child p:first-child /* Selects every <p> element that is the first child of its parent */
+:hover a:hover          /* Selects links when hovered */
+:link a:link            /* Selects all unvisited links */
+:target #news:target    /* Selects the currently active #news element */
+
+/* :checked input:checked Example */
+<style>
+  option:checked {
+    height: 500px;
+    width: 500px;
+    background-color: grey;
+    font-size: 10px;
+  }
+</style>
+<body>
+  <select>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+</body>
+
+/* :disabled input:disabled Example */
+<style>
+  input[type=text]:enabled {
+    background: #ffff00;
+  }
+
+  input[type=text]:disabled {
+    background: #dddddd;
+  }
+</style>
+<body>
+  <form action="">
+    First name: <input type="text" value="Mickey"><br>
+    Last name: <input type="text" value="Mouse"><br>
+    Country: <input type="text" disabled="disabled" value="Disneyland">
+  </form>
+</body>
+
+/* :first-child p:first-child Example */
+<style>
+  p:first-child {
+    background-color: yellow;
+  }
+</style>
+<body>
+  <p>This paragraph is the first child of its parent (body).</p>
+  <p>This paragraph is not the first child of its parent (body).</p>
+  <div>
+    <p>This paragraph is the first child of its parent (div).</p>
+    <p>This paragraph is not the first child of its parent (div).</p>
+  </div>
+</body>
+
+/* :focus input:focus Example */
+<style>
+  input:focus {
+    background-color: yellow;
+  }
+</style>
+<body>
+  <h1>Demo of the :focus selector</h1>
+  <p>Click inside the text fields to see a yellow background:</p>
+  <form>
+    First name: <input type="text" name="firstname"><br>
+    Last name: <input type="text" name="lastname">
+  </form>
+</body>
+
+/* :hover a:hover Example */
+<style>
+  a:hover {
+    background-color: yellow;
+  }
+</style>
+<body>
+  <h1>Demo of the :hover selector</h1>
+  <p>The :hover selector styles links on mouse-over:</p>
+  <a href="https://www.w3schools.com">w3schools.com</a>
+  <a href="https://www.wikipedia.org">wikipedia.org</a>
+</body>
+
+/* :target Example */
+<style>
+  .tab div {
+    display: none;
+  }
+
+  .tab div:target {
+    display: block;
+  }
+</style>
+<body>
+  <div class="tab">
+    <a href="#link1">Link 1</a>
+    <a href="#link2">Link 2</a>
+    <a href="#link3">Link 3</a>
+
+    <div id="link1">
+      <h3>Content to Link 1</h3>
+      <p>Hello World!</p>
+    </div>
+
+    <div id="link2">
+      <h3>Content to Link 2</h3>
+      <h4>Great success!</h4>
+    </div>
+
+    <div id="link3">
+      <h3>Content to Link 3</h3>
+      <p>Yeah!</p>
+    </div>
+  </div>
+</body>
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+<style>
+
+body {
+
+  background-color:white;
+
+}
+
+ul {
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background-color: #38444d;
+
+}
+
+
+li {
+
+  float: left;
+
+}
+
+
+li a, .dropbtn {
+
+  display: inline-block;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 14px 16px;
+
+  text-decoration: none;
+
+}
+
+
+li a:hover, .dropdown:hover .dropbtn {
+
+  background-color: red;
+
+}
+
+
+li.dropdown {
+
+  display: inline-block;
+
+}
+
+
+.dropdown-content {
+
+  display: none;
+
+  position: absolute;
+
+  background-color: #f9f9f9;
+
+  min-width: 160px;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  z-index: 1;
+
+}
+
+
+.dropdown-content a {
+
+  color: black;
+
+  padding: 12px 16px;
+
+  text-decoration: none;
+
+  display: block;
+
+  text-align: left;
+
+}
+
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+
+.dropdown:hover .dropdown-content {
+
+  display: block;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<ul>
+
+  <li><a href="#home">Home</a></li>
+
+  <li><a href="#news">News</a></li>
+
+  <li class="dropdown">
+
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+
+    <div class="dropdown-content">
+
+      <a href="#">Link 1</a>
+
+      <a href="#">Link 2</a>
+
+      <a href="#">Link 3</a>
+
+    </div>
+
+  </li>
+
+</ul>
+
+
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+
+<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+/* CSS 2D Transforms */
+
+CSS transforms allow you to move, rotate, scale, and skew elements.
+
+
+
+CSS 2D Transforms Methods
+
+With the CSS transform property you can use the following 2D transformation methods:
+
+
+
+translate()
+
+rotate()
+
+scaleX()
+
+scaleY()
+
+scale()
+
+skewX()
+
+skewY()
+
+skew()
+
+matrix()
+
+
+
+
+
+
+
+
+
+/* The translate() Method */
+
+
+
+The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).
+
+
+
+<style> 
+
+div {
+
+  width: 300px;
+
+  height: 100px;
+
+  background-color: grey;
+
+  border: 1px solid black;
+
+  transform: translate(50px,50px);
+
+}
+
+</style>
+
+
+
+<h1>The translate() Method</h1>
+
+<p>The translate() method moves an element from its current position:</p>
+
+
+
+<div>
+
+This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+
+</div>
+
+
+
+
+
+
+
+
+
+/* The rotate() Method */
+
+
+
+The rotate() method rotates an element clockwise or counter-clockwise according to a given degree.
+
+
+
+<style>
+
+div {
+
+  width: 300px;
+
+  height: 100px;
+
+  background-color: yellow;
+
+  border: 1px solid black;
+
+}
+
+
+
+div#myDiv {
+
+  transform: rotate(20deg);
+
+}
+
+</style>
+
+
+
+<div>
+
+This a normal div element.
+
+</div>
+
+
+
+<div id="myDiv">
+
+This div element is rotated clockwise 20 degrees.
+
+</div>
+
+
+
+
+
+
+
+/* The scale() Method */
+
+The scale() method increases or decreases the size of an element (according to the parameters given for the width and height).
+
+
+
+<style>
+
+div {
+
+  margin: 150px;
+
+  width: 200px;
+
+  height: 100px;
+
+  background-color: yellow;
+
+  border: 1px solid black;
+
+  transform: scale(2,3);
+
+}
+
+</style>
+
+<div>
+
+This div element is two times of its original width, and three times of its original height.
+
+</div>
+
+
+
+
+
+
+
+
+
+/* The skew() Method */
+
+
+
+<style>
+
+div {
+
+  width: 300px;
+
+  height: 100px;
+
+  background-color: yellow;
+
+  border: 1px solid black;
+
+}
+
+
+
+div#myDiv {
+
+  transform: skew(5deg,20deg);
+
+}
+
+</style>
+
+
+
+<div>
+
+This a normal div element.
+
+</div>
+
+
+
+<div id="myDiv">
+
+This div element is skewed 20 degrees along the X-axis, and 10 degrees along the Y-axis.
+
+</div>
+
+  
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+* CSS 3D Transforms */
+
+/* 3D transformation methods: */
+
+
+
+rotateX()
+
+rotateY()
+
+rotateZ()
+
+
+
+The rotateX() Method
+
+
+
+#myDiv {
+
+  transform: rotateY(150deg);
+
+}
+
+
+
+#myDiv {
+
+  transform: rotateY(150deg);
+
+}
+
+
+
+<style>
+
+div {
+
+  width: 300px;
+
+  height: 100px;
+
+  background-color: yellow;
+
+  border: 1px solid black;
+
+}
+
+
+
+#myDiv {
+
+  transform: rotateZ(120deg);
+
+
+
+}
+
+</style>
+
+
+
+<div id="myDiv">
+
+This div element is rotated 90 degrees.
+
+</div>
+
+
+
+
+
+
+
+/* CSS Transitions */
+
+CSS transitions allows you to change property values smoothly, over a given duration.
+
+transition
+
+transition-delay
+
+transition-duration
+
+transition-property
+
+transition-timing-function
+
+
+
+/* Note: If the duration part is not specified, the transition will have no effect, because the default value is 0. */
+
+
+
+<style> 
+
+div {
+
+  width: 100px;
+
+  height: 100px;
+
+  background: red;
+
+  transition: width 2s, height 4s;
+
+}
+
+
+
+div:hover {
+
+  width: 300px;
+
+  height: 300px;
+
+}
+
+</style>
+
+
+
+
+
+<div></div>
+
+
+
+
+
+
+
+/* Specify the Speed Curve of the Transition */
+
+The transition-timing-function property specifies the speed curve of the transition effect.
+
+
+
+The transition-timing-function property can have the following values:
+
+
+
+ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+
+linear - specifies a transition effect with the same speed from start to end
+
+ease-in - specifies a transition effect with a slow start
+
+ease-out - specifies a transition effect with a slow end
+
+ease-in-out - specifies a transition effect with a slow start and end
+
+cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+
+
+
+<style> 
+
+div {
+
+  width: 100px;
+
+  height: 100px;
+
+  background: red;
+
+  transition: width 2s;
+
+}
+
+
+
+#div1 {transition-timing-function: linear; overflow:auto}
+
+#div2 {transition-timing-function: ease; overflow:auto}
+
+#div3 {transition-timing-function: ease-in; overflow:auto}
+
+#div4 {transition-timing-function: ease-out; overflow:auto}
+
+#div5 {transition-timing-function: ease-in-out; overflow:auto}
+
+
+
+div:hover {
+
+  width: 300px;
+
+}
+
+</style>
+
+
+
+
+
+<h1>The transition-timing-function Property</h1>
+
+
+
+<p>Hover over the div elements below, to see the different speed curves:</p>
+
+
+
+<div id="div1">linear
+
+ specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+
+</div><br>
+
+<div id="div2">ease
+
+specifies a transition effect with the same speed from start to end
+
+</div><br>
+
+<div id="div3">ease-in
+
+specifies a transition effect with a slow start
+
+</div><br>
+
+<div id="div4">ease-out
+
+specifies a transition effect with a slow end
+
+</div><br>
+
+<div id="div5">ease-in-out 
+
+  specifies a transition effect with a slow start and end
+
+</div><br>
+
+
+
+
+
+
+
+/* Delay the Transition Effect */
+
+The transition-delay property specifies a delay (in seconds) for the transition effect.
+
+<style> 
+
+div {
+
+  width: 100px;
+
+  height: 100px;
+
+  background: red;
+
+  transition: width 3s;
+
+  transition-delay: 1s;
+
+}
+
+
+
+div:hover {
+
+  width: 300px;
+
+}
+
+</style>
+
+
+
+<div></div>
+
+
+
+<p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+
+
+
+
+
+
+
+/* Transition + Transform */
+
+<style> 
+
+div {
+
+  width: 100px;
+
+  height: 100px;
+
+  background: red;
+
+  transition: width 2s, height 2s, transform 2s;
+
+}
+
+
+
+div:hover {
+
+  width: 300px;
+
+  height: 300px;
+
+  transform: rotate(180deg);
+
+}
+
+</style>
+
+
+
+<h1>Transition + Transform</h1>
+
+
+
+<p>Hover over the div element below:</p>
+
+
+
+<div></div>
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+/* ::after	p::after	Insert content after every <p> element */
+
+<style>
+
+p::after { 
+
+  content: " - Remember this";
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>Demo of the ::after selector</h1>
+
+
+
+<p>My name is Donald</p>
+
+<p>I live in Ducksburg</p>
+
+
+
+<style>
+
+p.intro::first-letter {
+
+  color: #ff0000;
+
+  font-size: 200%;
+
+}  
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<p class="intro">This is an introduction.</p>
+
+<p>This is a paragraph with some text. A bit more text even.</p>
+
+
+
+
+
+
+
+
+
+/* ::before	p::before	Insert content before every <p> element */
+
+<style>
+
+p::before { 
+
+  content: "Read this -";
+
+  background-color: yellow;
+
+  color: red;
+
+  font-weight: bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>Demo of the ::before selector</h1>
+
+
+
+<p>My name is Donald</p>
+
+<p>I live in Ducksburg</p>
+
+
+
+
+
+
+
+
+
+/* ::first-letter	p::first-letter	Selects the first letter of every <p> element */
+
+<style>
+
+p::first-letter {
+
+  font-size: 200%;
+
+  color: #8A2BE2;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>Demo of the ::first-letter selector</h1>
+
+
+
+<p>My name is Donald.</p>
+
+<p>I live in Duckburg.</p>
+
+<p>My best friend is Mickey.</p>
+
+
+
+
+
+/* ::first-line	p::first-line	Selects the first line of every <p> element */
+
+<style>
+
+p::first-line {
+
+  background-color: yellow;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>Demo of the ::first-line selector</h1>
+
+
+
+<h2>WWF's Mission Statement</h2>
+
+<p>To stop the degradation of the planet's natural environment and to build a future in which humans live in harmony with nature, by; conserving the world's biological diversity, ensuring that the use of renewable natural resources is sustainable, and promoting the reduction of pollution and wasteful consumption.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ::marker	::marker	Selects the markers of list items */
+
+<style>
+
+::marker { 
+
+  color: red;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>Demo of the ::marker selector</h1>
+
+
+
+<ul>
+
+  <li>Coffee</li>
+
+  <li>Tea</li>
+
+  <li>Milk</li>
+
+</ul>
+
+
+
+<ol>
+
+  <li>First</li>
+
+  <li>Second</li>
+
+  <li>Third</li>
+
+</ol>
+
+
+
+
+
+/* ::selection	p::selection	Selects the portion of an element that is selected by a user */
+
+<style>
+
+::selection {
+
+  color: red;
+
+  background: yellow;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>Select some text on this page:</h1>
+
+
+
+<p>This is a paragraph.</p>
+
+<div>This is some text in a div element.</div>
+
+
+
+
+
+
+
+
+
+/* CSS Opacity / Transparency */
+
+<style>
+
+img {
+
+  opacity: 0.5;
+
+}
+
+</style>
+
+
+
+<h1>Image Transparency</h1>
+
+<p>The opacity property specifies the transparency of an element. The lower the value, the more transparent:</p>
+
+
+
+<p>Image with 50% opacity:</p>
+
+<img src="img_forest.jpg" alt="Forest" width="170" height="100">
+
+
+
+
+
+/* example */
+
+<style>
+
+img {
+
+  opacity: 0.5;
+
+}
+
+
+
+img:hover {
+
+  opacity: 1.0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>Image Transparency</h1>
+
+<p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over:</p>
+
+<img src="img_forest.jpg" alt="Forest" width="170" height="100">
+
+<img src="img_mountains.jpg" alt="Mountains" width="170" height="100">
+
+<img src="img_5terre.jpg" alt="Italy" width="170" height="100">
+
+
+

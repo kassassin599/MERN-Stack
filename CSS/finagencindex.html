@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAgenc</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 0;
+        }
+        header{
+            position: sticky;
+            top: 0px;
+            height: 100px;
+            width: 100%;
+            background-color: white;
+            border-radius: 3px;
+            z-index: 10;
+        }
+        ul li{
+            display: inline;
+            padding: 20px;
+            background-color: white;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav{
+            display: flex;
+        }
+        h1{
+            padding: 10px 80px;
+        }
+        h1 span{
+            color: rgb(81, 161, 236);
+        }
+        li a{
+            color: black;
+        }
+        li a:hover{
+            color: blue;
+        }
+        li a:active, li a:visited{
+            color: #ffd900;
+        }
+        .active{
+            color: blue;
+        }
+        nav img{
+            border: 2px solid black;
+        }
+        .leftheader{
+            margin: 10px 50px;
+            min-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .leftheader button{
+            height: 60px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffd900;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .leftheader button:hover{
+            background-color: rgb(81, 161, 236);
+            color: white;
+            cursor: pointer;
+        }
+        .leftheader img{
+            margin: 10px 20px;
+        }
+        .topdiv1{
+            width: 100%;
+            position: relative;
+        }
+        .scrollimg{
+            min-height: 400px;
+            padding-top: 100px;
+            background-image: url("bg_image.jpg");
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-blend-mode: multiply; 
+            background-size: cover;
+            display: block;
+            justify-content: center;
+            align-items: center;
+        }
+        .scrollimg h1{
+            margin-top: 0;
+            margin-left: 150px;
+            padding-left: 0px;
+            font-size: 80px;
+        }
+        .scrollimg p{
+            margin: 0 150px;
+            color: #ffd900;
+        }
+        .readmorebtn{
+            height: 50px;
+            width: 100px;
+            border: none;
+            background-color: rgb(23, 109, 190);
+            color: white;
+            border-radius: 5px;
+            margin: 0px 150px;
+            cursor: pointer;
+        }
+        .readmorebtn:hover{
+            background-color: #ffd900;
+            color: black;
+        }
+        .sidearrows{
+            position: absolute;
+            top: 40%;
+            left: 5%;
+        }
+        .sidearrows button{
+            height: 40px;
+            width: 40px;
+            display: block;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.282);
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .scrolldots{
+            position: absolute;
+            bottom: 5%;
+            left: 45%;
+        }
+        .scrolldots h1{
+            margin: 10px;
+            padding: 0;
+            display: inline;
+            color: white;
+            cursor: pointer;
+        }
+        .topdiv2{
+            width: 100%;
+            position: relative;
+            display: flex;
+            color: gray;
+        }
+        .leftdivinfo{
+            margin: 0;
+            margin-left: 80px;
+            padding: 50px;
+        }
+        .rightdivinfo{
+            margin: 0;
+            margin-right: 80px;
+            padding: 50px;
+            min-width: 500px;
+        }
+        .topdiv2 h1{
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+        .ptopdiv2{
+            color: rgb(65, 65, 65);
+        }
+        .goupbtn{
+            position: fixed;
+            bottom: 10%;
+            right: 2%;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            height: 40px;
+            width: 40px;
+            z-index: 10;
+        }
+        .goupbtn h1{
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+        .goupbtn a{
+            color: white;
+        }
+        .topdiv3{
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+        .tophalfdiv3{
+            width: 100%;
+            height: 350px;
+            background-image: url("bg_image.jpg");
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-blend-mode: multiply; 
+            background-size: cover;
+            display: flex;
+        }
+        .leftdivintopdiv3{
+            margin: 80px 100px;
+            min-width: 400px;
+        }
+        .leftdivintopdiv3 h1{
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .leftdivintopdiv3 p{
+            margin-bottom: 0;
+            padding-bottom: 0;
+            color: #ffd900;
+        }
+        .rightdivintopdiv3{
+            margin-top: 80px;
+            margin-right: 100px;
+            color: white;
+        }
+        .infocards{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .infocard{
+            width: 300px;
+            height: 250px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px 10px;
+            text-align: center;
+            margin: 20px;
+        }
+        .infocard:hover{
+            background-color: rgb(58, 137, 255);
+            color: white;
+        }
+        .infocard h1{
+            cursor: pointer;
+        }
+        .infocardimgdiv{
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 120px;
+        }
+        .bottomhalfdiv3{
+            position: absolute;
+            bottom: -20%;
+            display: flex;
+            padding: 20px;
+        }
+        .selectedcard{
+            background-color: rgb(58, 137, 255);
+            color: white;
+        }
+
+        .textintopdiv4{
+            margin-top: 100px;
+            text-align: center;
+        }
+        .workcard{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            height: 600px;
+            margin-left: 200px;
+            margin-top: 50px;
+        }
+        .workcard img{
+            width: 400px;
+            height: 600px;
+        }
+        .textsecofcard{
+            background-color: black;
+            color: white;
+            width: 400px;
+            height: 400px;
+            padding: 100px 30px;
+        }
+        .textsecofcard h1{
+            padding: 0;
+        }
+        .textsecofcard button{
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(58, 137, 255);
+            color: white;
+            cursor: pointer;
+        }
+        .topdiv5{
+            width: 100%;
+            height: 200px;
+        }
+        .textintopdiv5{
+            padding: 100px;
+            text-align: center;
+        }
+        .textintopdiv5 h1{
+            padding: 0;
+        }
+        .topdiv6{
+            width: 100%;
+            height: 500px;
+            background-color: rgb(248, 248, 248);
+            position: relative;
+        }
+        .infocardsindiv6{
+            display: flex;
+        }
+        .profileimagediv{
+            width: 300px;
+        }
+        .profileimagediv img{
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 50px;
+            margin-top: 220px;
+            margin-left: 150px;
+        }
+        .textinfoindiv6{
+            padding: 200px 200px 0px 100px;
+            text-align: left;
+        }
+        .textinfoindiv6 p{
+            font-weight: bold;
+        }
+        .topdiv7{
+            width: 100%;
+            height: 500px;
+            margin: 50px 0px;
+            background-image: url("bg_image.jpg");
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-blend-mode: multiply; 
+            background-size: cover;
+            display: flex;
+        }
+        .leftdivindiv7{
+            width: 500px;
+            height: auto;
+            padding-left: 250px;
+            padding-top: 250px;
+        }
+        .leftdivindiv7 button{
+            background-color: #fff;
+            color: #3a89ff;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 25px;
+        }
+        .rightdivindiv7{
+            text-align: left;
+            padding: 150px;
+            color: #fff ;
+        }
+        .rightdivindiv7 h1{
+            padding: 0;
+        }
+        .topdiv8{
+            width: 100%;
+            height: 300px;
+            display: flex;
+        }
+        .rightdivindiv8{
+            margin-left: 150px;
+            margin-top: 120px;
+            height: 300px;
+        }
+        .rightdivindiv8 h1{
+            padding: 0;
+        }
+        .leftdivindiv8{
+            margin-right: 150px;
+            margin-top: 120px;
+            height: 300px;
+        }
+        footer{
+            width: 100%;
+            background-color: black;
+            height: 600px;
+            color: #fff;
+        }
+        footer h1{
+            padding: 0px;
+            margin: 0;
+        }
+        .footerheadings{
+            padding: 80px;
+            width: 100%;
+            display: flex;
+            font-size: 20px;
+        }
+        .leftfooter{
+            display: flex;
+            margin-left: 80px;
+        }
+        footer h3{
+            font-size: 25px;
+        }
+        .leftfooter img{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            padding: 5px;
+            background-color: #ffd900;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .leftfooter img:hover{
+            background-color: #3a89ff;
+        }
+        .leftsideinleftfooter{
+            padding-right: 100px;
+        }
+        .leftfooter a{
+            color: grey;
+            font-size: 18px;
+        }
+        .leftfooter address{
+            color: grey;
+            font-size: 18px;
+        }
+        .footermiddlesec{
+            display: flex;
+        }
+        .rightfooter{
+            padding-left: 120px;
+        }
+        .signupdiv input{
+            height: 50px;
+            width: 350px;
+            padding-left: 20px;
+            font-size: 15px;
+            border-radius: 5px;
+            margin: 0;
+            margin-right: 10px;
+        }
+        .signupdiv button{
+            height: 50px;
+            width: 50px;
+            background-color:#ffd900;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            top: 14px;
+        }
+        .footercopyrightsec{
+            margin-left: 80px;
+            margin-top: 50px;
+            color: grey;
+        }
+    </style>
+    <div class="goupbtn" >
+        <h1><a href="#top">^</a></h1>
+    </div>
+    <header class="header">
+        <nav>
+            <h1>Fin<span>Agenc</span></h1>
+
+            <ul>
+                <li><a href="https://www.google.in" class="active">Home</a></li>
+                <li><a href="https://www.google.in">About</a></li>
+                <li><a href="https://www.google.in">Services</a></li>
+                <li><a href="https://www.google.in">Pages v</a></li>
+                <li><a href="https://www.google.in">Contact</a></li>
+            </ul>
+
+            <div class="leftheader">
+                <img src="Assets/facebook-icon.png" alt="search icon" width="20px" height="20px">
+                <button>Start a Project</button>
+                <img src="Assets/twitter-icon.png" alt="moon icon" width="20px" height="20px">
+            </div>
+
+        </nav>
+    </header>
+    <div class="topdiv1">
+        <div class="scrollimg">
+            <p>
+                Lorem ipsum dolor sit amet consectetur.
+            </p>
+            <h1>
+                Lorem ipsum dolor sit amet elit.
+            </h1>
+            <button class="readmorebtn">Read more.</button>
+        </div>
+        <div class="sidearrows">
+            <button>></button>
+            <button><</button>
+        </div>
+        <div class="scrolldots">
+            <h1 style="color: blue;">.</h1>
+            <h1>.</h1>
+            <h1>.</h1>
+            <h1>.</h1>
+        </div>
+    </div>
+    <div class="topdiv2">
+        <div class="leftdivinfo">
+            <p>OUR STUDIO</p>
+            <h1>Creative Aproach</h1>
+            <p class="ptopdiv2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, dolorum reiciendis? Accusantium, placeat necessitatibus numquam pariatur soluta quam reiciendis debitis labore id asperiores tempora sint autem. <br><br> Optio consequuntur voluptatem recusandae voluptas nam repudiandae, beatae et dolores. Odio cum ratione molestias quibusdam ab ea, unde repudiandae odit sit deserunt eligendi facere!</p>
+        </div>
+        <div class="rightdivinfo">
+            <p>HISTORY</p>
+            <h1>Photographs are to memories what memory is to time.</h1>
+            <p class="ptopdiv2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatem harum eveniet ipsa amet soluta ea fuga, voluptatum facilis, aliquid placeat laborum.</p>
+            <p class="ptopdiv2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, impedit. Ab nemo quia beatae, corporis voluptas quam dicta sed voluptatem deleniti molestiae?</p>
+            <button class="readmorebtn">Read More.</button>
+        </div>
+    </div>
+    <div class="topdiv3">   
+        <div class="tophalfdiv3">
+            <div class="leftdivintopdiv3">
+                <p>WHAT WE OFFER</p>
+                <h1>Building Brands More Quickly</h1>
+            </div>
+            <div class="rightdivintopdiv3">
+                <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.Lorem ipsum dolor sit, amet consectetur elit.Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="bottomhalfdiv3">
+            <div class="infocard">
+                <div class="infocardimgdiv">
+                    <img src="Assets/umbrella.png" alt="" height="40px" width="40px">
+                </div>
+                <div class="infocardtextdiv">
+                    <h1 style="color: black;">Marketing</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, laboriosam.</p>
+                </div>
+            </div>
+            <div class="infocard selectedcard">
+                <div class="infocardimgdiv">
+                    <img src="Assets/umbrella.png" alt="" height="40px" width="40px">
+                </div>
+                <div class="infocardtextdiv">
+                    <h1 style="color: black;">Marketing</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, laboriosam.</p>
+                </div>
+            </div>
+            <div class="infocard">
+                <div class="infocardimgdiv">
+                    <img src="Assets/umbrella.png" alt="" height="40px" width="40px">
+                </div>
+                <div class="infocardtextdiv">
+                    <h1 style="color: black;">Marketing</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, laboriosam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topdiv4">
+        <div class="textintopdiv4">
+            <p>OUR WORKS</p>
+            <h1>What We Do</h1>
+        </div>
+        <div class="workcards">
+            <div class="workcard">
+                <img src="Assets/productimage.jpg" alt="Product image">
+                <div class="textsecofcard">
+                    <p>UI/UX DESIGN</p>
+                    <h1>The ideas that are not afraid to be different.</h1>
+                    <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula tempufddfel.</p>
+                    <button>></button>
+                </div>
+            </div>
+        </div>
+        <div class="workcards">
+            <div class="workcard">
+                <div class="textsecofcard">
+                    <p>UI/UX DESIGN</p>
+                    <h1>The ideas that are not afraid to be different.</h1>
+                    <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula tempufddfel.</p>
+                    <button>></button>
+                </div>
+                <img src="Assets/productimage.jpg" alt="Product image">
+            </div>
+        </div>
+        <div class="workcards">
+            <div class="workcard">
+                <img src="Assets/productimage.jpg" alt="Product image">
+                <div class="textsecofcard">
+                    <p>UI/UX DESIGN</p>
+                    <h1>The ideas that are not afraid to be different.</h1>
+                    <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula tempufddfel.</p>
+                    <button>></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topdiv5">
+        <div class="textintopdiv5">
+            <p>OUR UPDATES</p>
+            <h1>Latest News</h1>
+        </div>
+    </div>
+    <div class="topdiv6">
+        <div class="infocardsindiv6">
+            <div class="profileimagediv">
+                <img src="boat.gif" alt="boat profile image">
+            </div>
+            <div class="textinfoindiv6">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, nihil veritatis aut, voluptate, quasi vitae unde perspiciatis cumque culpa eveniet rerum dolores eos assumenda dolore nobis quia pariatur. Vitae, quos perferendis possimus a blanditiis optio reprehenderit nulla quam est porro labore dolore ullam dolores, accusamus libero obcaecati pariatur incidunt itaque!</p>
+                <p>John Wilson</p>
+                <p style="font-weight: normal; color: gray;">City Name</p>
+            </div>
+        </div>
+        <div class="scrolldots">
+            <h1 style="color: blue;">.</h1>
+            <h1 style="color: black;">.</h1>
+            <h1 style="color: black;">.</h1>
+            <h1 style="color: black;">.</h1>
+        </div>
+    </div>
+    <div class="topdiv7">
+        <div class="leftdivindiv7">
+            <button>></button>
+        </div>
+        <div class="rightdivindiv7">
+            <p style="color: #ffd900;">UI/UX DESIGN</p>
+            <h1>The ideas that are not afraid to be different.</h1>
+            <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula tempufddfel.</p>
+            <button class="readmorebtn" style="margin: 0;">Read More.</button>
+        </div>
+    </div>
+    <div class="topdiv8">
+        <div class="rightdivindiv8">
+            <p>LET'S WORK TOGETHER</p>
+            <h1>Have an idea? Let's get it done right!</h1>
+        </div>
+        <div class="leftdivindiv8">
+            <button class="readmorebtn" style="width: 200px; margin-left: 100px;">Let's work together</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footerheadings">
+            <h1>Fin<span>Agenc</span></h1>
+            <h1 style="text-align: right; padding-left: 500px;">Let's Start Work With <br> FinAgenc Today</h1>
+        </div>
+        <div class="footermiddlesec">
+            <div class="leftfooter">
+                <div class="leftsideinleftfooter">
+                    <h3>Phone</h3>
+                    <a href="tel:+(21) 255 088 4943">+(21) 255 088 4943</a>
+                    <h3>Address</h3>
+                    <address>    
+                        FinAgenc, Honey Street,Main Road <br> London, UK - 49436.
+                    </address>
+                </div>
+                <div class="rightsideinleftfooter">
+                    <h3>Support</h3>
+                    <a href="mailto:FinAgenc@mail.com" class="mail">
+                        FinAgenc@mail.com</a>
+                    <h3>Follow</h3>
+                    <div class="socials">
+                        <img src="Assets/twitter-icon.png" alt="boat gif">
+                        <img src="Assets/facebook-icon.png" alt="boat gif">
+                        <img src="Assets/youtube-icon.png" alt="boat gif">
+                        <img src="Assets/linkedin-icon.png" alt="boat gif">
+                    </div>
+                </div>
+            </div>
+            <div class="rightfooter">
+                <h3>Newsletter</h3>
+                <div class="signupdiv">
+                    <input type="search" name="email" id="" placeholder="Your email">
+                    <button><img src="Assets/paper-plane.png" alt="" width="40px" height="40px" ></button>
+                </div>
+                <p>Subscribe to our mailing list and get updates to your email inbox.</p>
+            </div>
+        </div>
+        <div class="footercopyrightsec">
+            <p>&copy; 2024 FinAgenc. All Rights Reserved | WordPress Theme by W3Layouts.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+ div{
+    width: 400px;
+    height: 100px;
+ }
+        table {
+      
+          border-collapse: collapse;
+      
+          width: 100%;
+      
+        }
+      
+        
+      
+        th, td {
+      color: brown;
+          text-align: center;
+      
+          padding: 8px;
+          border: 5px solid white;
+
+          /* border: 1px solid red; */
+        }
+      
+        
+      
+        tr:nth-child(even){background-color: #f2f2f2}
+      
+        th {
+      
+          /* background-color: #04AA6D; */
+      
+          color: rgb(255, 255, 255);
+            height: 50px;
+        }
+
+        th.a{
+            background-color: darkslategrey;
+        }
+        th.b{
+            background-color: crimson;
+        }
+        th.c{
+            background-color: green;
+        }
+      
+        .btn{
+            border: 1px solid royalblue;
+            border-radius: 5px;
+            padding: 5px 80px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .btn:hover{
+            color: white;
+            background-color: royalblue ;
+            border-radius: 5px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .defaultbtn{
+            color: white;
+            background-color: royalblue ;
+           padding: 20px 10px;
+           width: 200px;
+           border: 1px solid royalblue;
+           border-radius: 5px;
+           box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+     .defaultbtn:hover{
+            color: royalblue;
+            background-color: rgb(255, 255, 255) ;
+            border: 1px solid royalblue;
+            border-radius: 5px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        </style>
+      
+        </head>
+      
+        <body>
+      
+        
+      
+        <h2>Colored Table Header</h2>
+      
+        
+
+        <table>
+      
+          <tr>
+      
+            <th class="a">Firstname</th>
+      
+            <th class="b">Lastname</th>
+      
+            <th class="c">Savings</th>
+      
+          </tr>
+      
+          <tr>
+      
+            <td>Peter</td>
+      
+            <td><img src="tick.png" alt="Tick Image" height="20px"></td>
+      
+            <td>$100</td>
+      
+          </tr>
+      
+          <tr>
+      
+            <td>Lois</td>
+      
+            <td><img src="tick.png" alt="Tick Image" height="20px"></td>
+      
+            <td>$150</td>
+      
+          </tr>
+      
+          <tr>
+      
+            <td>Joe</td>
+      
+            <td>-</td>
+      
+            <td>$300</td>
+      
+          </tr>
+      
+          <tr>
+      
+            <td>Cleveland</td>
+      
+            <td>-</td>
+      
+            <td>$250</td>
+      
+        </tr>
+          <tr>
+      
+            <td><button class="btn" onclick=""> Choose</button></td>
+      
+            <td><button class="defaultbtn"> Choose</button></td>
+      
+            <td><button class="btn"> Choose</button></td>
+      
+        </tr>
+      
+        </table>
+      
+ 
+
+
+       <!-- <style>
+
+        li {
+      
+          display: inline;
+      
+        }
+        P {
+      
+          display: inline;
+      
+        }
+
+
+      
+        </style>
+      
+        </head>
+      
+        <body>
+      
+        
+      
+        <p>Display a list of links as a horizontal menu:</p>
+        <p>Display a list of links as a horizontal menu:</p>
+        <p>Display a list of links as a horizontal menu:</p>
+        <p>Display a list of links as a horizontal menu:</p>
+        <p>Display a list of links as a horizontal menu:</p>
+      
+        
+      
+        <ul>
+      
+          <li><a href=""target="_blank">HTML</a></li>
+      
+          <li><a href="" target="_blank">CSS</a></li>
+      
+          <li><a href="" target="_blank">JavaScript</a></li>
+      
+        </ul> -->
+
+
+
+<!-- 
+        <style>
+
+          span {
+        
+            display: block;
+        
+          }
+        
+          </style>
+        
+          </head>
+        
+          <body>
+        
+          
+        
+          <h1>Display span elements as block elements</h1>
+        
+          
+        
+          <span>A display property with</span> <span>a value of "block" results in</span> <span>a line break between each span elements.</span>
+         -->
+
+
+
+
+
+         <!-- <style>
+
+       P {
+        
+            display: none;
+        
+          }
+        
+          </style>
+        
+          
+        
+          <h1>This is a visible heading</h1>
+        
+          <h1 class="hidden">This is a hidden heading</h1>
+        
+          <p>Notice that the h1 element with display: none; does not take up any space.</p>
+        
+           -->
+        
+          
+           <!-- <style>
+
+            div {
+          
+              display: flex;
+          
+            }
+          button{
+            display: inline;
+            padding: 10px 20px;
+            margin: 20px;
+          }
+
+          ul{
+            display: none;
+          }
+
+          p{
+            display: block;
+          }
+              li{
+                display: inline;
+              }
+            </style>
+          
+            </head>
+          
+            <body>
+          
+            
+          
+            <p>Display a list of links </p><p> as a horizontal menu:</p>
+          
+            <div>
+              <button>First</button>
+              <button>Second</button>
+              <button>Third</button>
+            </div>
+          
+            <ul>
+          
+              <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+          
+              <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+          
+              <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+          
+            </ul> -->
+          
+
+
+            <!-- <style>
+
+              div.fixed {
+            
+                position: fixed;
+            
+                bottom: 10px;
+            
+                left: 10px;
+            
+                width: 50px;
+            
+                border: 3px solid #73AD21;
+                text-align: center;
+                font-size: 40px;
+            color: #73AD21;
+cursor: pointer;
+
+              }
+            
+              </style>
+            
+              </head>
+            
+              <body>
+            
+                 <div class="fixed">
+            
+              ^
+            
+              </div>
+            
+            
+              <h2>position: fixed;</h2>
+            
+              
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+              <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+            
+               -->
+            
+           
+
+
+
+<!-- 
+               <style>
+
+                div.relative {
+              
+                  position: relative;
+              
+                  width: 400px;
+              
+                  height: 200px;
+              
+                  border: 3px solid #73AD21;
+              
+                } 
+                div.relative1 {
+              
+                  position: relative;
+                  
+                  width: 400px;
+              
+                  height: 200px;
+              
+                  border: 3px solid #73AD21;
+              
+                } 
+              
+                
+              
+                div.absolute {
+              
+                  position: absolute;
+              
+                  
+            
+                  width: 200px;
+              
+                  height: 100px;
+              
+                  border: 3px solid #73AD21;
+              
+                }
+                div.absolute1 {
+              
+                  position: absolute;
+              
+                  width: 200px;
+              
+                  height: 100px;
+              
+                  border: 3px solid #73AD21;
+              
+                }
+              
+                </style>
+              
+                </head>
+              
+                <body>
+              
+                
+              
+                <h2>position: absolute;</h2>
+              
+                
+              
+                <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+              
+                
+              
+                <div class="relative">This div element has position: relative;
+              
+                  
+                </div>
+                <div class="relative1">This div element has position: relative;
+              
+                  
+                </div>
+                <div class="absolute">This div element has position: absolute;</div>
+                <div class="absolute1">This div element has position: absolute;</div>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+      
+</body>
+</html>

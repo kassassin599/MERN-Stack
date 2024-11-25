@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div.parent{
+            display: flex;
+            background-image: url(/bg_image.jpg);
+            height: 500px;
+            align-items: center;
+        }
+        div.left{
+            /* position: fixed; */
+            left: 0;
+            top: 250px;
+            width: 200px;
+        }
+        div.right{
+            /* position: fixed; */
+            right: 0;
+            top: 250px;
+            width: 200px;
+        }
+        h1{
+            padding: 10px;
+            margin: 20px;
+            border: 2px solid rgb(255, 203, 108);
+            background-color: orange;
+            cursor: pointer;
+        }
+        img.displaypic{
+            border-radius: 175px;
+            margin: 100px;
+        }
+        
+        img.socialimg{
+            border-radius: 25px;
+            margin: 0 5px;
+        }
+        p{
+            font-style: italic;
+            margin: 100px 100px 10px 0px;
+        }
+
+        div.center{
+            display: flex;
+        }
+        p.name{
+            font-weight: bold;
+        }
+        span.company{
+            font-weight: normal;
+        }
+        div.socials{
+            display: flex;
+            width: 300px;
+        }
+    </style>
+
+    <div class="parent">
+        <div class="left">
+            <h1>&lt;</h1>
+        </div>
+        <div class="center">
+            <img class="displaypic" src="boat.gif" alt="Boat Image" height="250px" width="250px">
+            <div class="info">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo rerum dolore consectetur! Unde itaque, similique cumque harum architecto facere quis! Voluptatum impedit ratione, autem eaque assumenda, temporibus et iste possimus tempora beatae obcaecati debitis. Sint qui esse quas natus est eius blanditiis dolore perspiciatis impedit sed temporibus, praesentium, ad earum molestias.</p>
+                <p class="name">John Doe <span class="company">, CEO company</span></p>
+                <div class="socials">
+                    <img class="socialimg" src="boat.gif" alt="Whatsapp" height="50px" width="50px">
+                    <img class="socialimg" src="/bg_image.jpg" alt="Boat Image" height="50px" width="50px">
+                    <img class="socialimg" src="/download.jpg" alt="Boat Image" height="50px" width="50px">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h1>&gt;</h1>
+        </div>
+    </div>
+   
+</body>
+</html>

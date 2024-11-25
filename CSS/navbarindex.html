@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .parent{
+            position: sticky;
+            top: 10px;
+            background-color: cornflowerblue;
+            height: 60px;
+            width: 100%;
+            border-radius: 3px;
+        }
+        .parent div{
+            float: right;
+            padding: 5px 10px;
+            margin: 15px 10px 0px;
+            background-color: aqua;
+            border-radius:3px;
+        }
+        .parent div:hover{
+            cursor: pointer;
+        }
+        .parent img{
+            width: 50px;
+            margin: 5px;
+            padding-left: 20px;
+        }
+        .overflowex{
+            overflow: auto;
+            width: 200px;
+            height: 200px;
+            margin: 50px 500px;
+        }
+    </style>
+    <div class="parent">
+        <img src="Assets/logo.png" alt="Company Logo">
+        <div class="about">About Us</div>
+        <div class="contact">Contact</div>
+        <div class="services">Services</div>
+        <div class="login">Login</div>
+    </div>
+    <div class="overflowex">
+        <img src="/boat.gif" alt="">
+    </div>
+    <img src="/bg_image.jpg" alt="">
+</body>
+</html>

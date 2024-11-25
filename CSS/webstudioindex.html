@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 0px 20px 0px 20px;
+            background-color: rgb(231, 231, 231);
+        }
+        .parentdiv{
+            display: block;
+            background-color: white;
+            box-shadow: 10px 10px 5px #aaaaaa, -10px 10px 5px #aaaaaa;
+        }
+
+    .topdiv{
+        width: 100%;
+        background-image: url(/Assets/mountain.png);
+        background-size: cover;
+        height: 600px;
+        align-items: center;
+        position: relative;
+    }
+    .topheader{
+        position: absolute;
+        right: 28%;
+        top: 15%;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 800;
+    }
+    .startbtn{
+        position: absolute;
+        right: 42%;
+        top: 50%;
+        background-color: rgb(255, 98, 0);
+        /* border-color: rgb(255, 98, 0); */
+        border: none;
+        border-radius: 5px;
+        color: white;
+        width: 200px;
+        height: 60px;
+        font-weight: bold;
+    }
+    .tagline{
+        position: absolute;
+        right: 35%;
+        bottom: -6%;
+        word-spacing: 5px;
+        letter-spacing:5px;
+        font-weight: bold;
+    }
+    h2{
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    h3{
+        font-weight: bold;
+        text-align: center;
+    }
+    .bottomdiv p{
+        margin-bottom: 0;
+    }
+    p{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    span{
+        border-bottom: 3px solid rgb(255, 98, 0);
+        padding-bottom: 5px;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .infocards{
+        display: flex;
+    }
+    .infocard{
+        margin: 20px 40px;
+    }
+    h1{
+        text-align: center;
+    }
+    .highlightsec{
+        background-color: #ff6200;
+        color: white;
+        display: flex;
+        margin: 50px 0;
+    }
+    .statscard{
+        margin: auto;
+    }
+    .logo{
+        position: absolute;
+        left: 5%;
+        top: 1%
+    }
+    .headeroptions{
+        position: absolute;
+        right: 5%;
+        top: 1%;
+        display: flex;
+        width: 300px;
+        height: 80px;
+        /* overflow: hidden; */
+    }
+    .headeroptions ul{
+        display: flex;
+        list-style-type: none;
+        margin-top: 40px;
+    }
+    .headeroptions ul li{
+        margin: 20px;
+    }
+
+    .headeroptionh3{
+        margin: auto;
+        font-weight: normal;
+    }
+    .triangle{
+       position: absolute;
+       right: 10%;
+       top: -10%;
+    }
+    
+    .dropdown-content p{
+        text-align: left;
+        margin: 0;
+    }
+    .textinput{
+        text-align: left;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 90%;
+        box-shadow: 5px 5px 5px rgb(156, 85, 34);
+    }
+    .psw{
+        border-bottom: none;
+    }
+    .psw a:hover{
+        text-decoration: solid underline #ff6200 2px;
+    }
+    .psw a{
+        color: #ff6200;
+    }
+    .forgotpass{
+        margin-top: 10px;
+    }
+    .dropdown-content button{
+        background-color: #ff6200;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 3px 10px;
+        box-shadow: 3px 3px 5px rgb(156, 85, 34);
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        right: -3%;
+        top: 145%;
+        background-color: rgb(255, 198, 163);
+        border-radius: 5px;
+        padding: 20px;
+        width: 230px;
+        box-shadow: 10px 10px 5px rgb(170, 170, 170);
+    }
+    </style>
+    <div class="parentdiv">
+        <div class="topdiv">
+            <img class="logo" src="/Assets/logo.png" alt="Company Logo" width="100px" height="100px">
+            <h1 class="topheader">WE CREATE UNIQUE <br>WEB SOLUTIONS</h1>
+            <button class="startbtn">GET STARTED</button>
+            <p class="tagline">CREATIVE AGENCY SINCE 2010</p>
+            <div class="headeroptions">
+                <ul>
+                    <li><a href="" style="font-size: 20px;">About</a></li>
+                    <li><a href=""  style="font-size: 20px;">Services</a></li>
+                    <li class="dropdown"><a href=""  style="font-size: 20px;">Login</a>
+                        <div class="dropdown-content">
+                                <img class="triangle" src="triangle2.png" alt="Triangle image" height="10px" width="10px">
+                                <form action="action_page.php" method="post">
+                                <div class="container">
+                                    <label for="uname"><b>Username</b></label>
+                                    <input class="textinput" type="text" placeholder="Enter Username" name="uname" required>
+                            
+                                    <label for="psw"><b>Password</b></label>
+                                    <input class="textinput" type="password" placeholder="Enter Password" name="psw" required>
+                            
+                                    <button type="submit">Login</button>
+                                    <label>
+                                        <input style="accent-color: #ff6200;" type="checkbox" checked="checked" name="remember"> Remember me
+                                    </label>
+                                </div>
+                                <div class="container forgotpass">
+                                    <button type="button" class="cancelbtn" style=".logindiv:target{display: none;}"><a style="color: white;" href="">Cancel</a></button>
+                                    <span class="psw">Forgot <a href="#">Password?</a></span>
+                                </div>
+                                </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="middiv">
+            <h2>We're <span class="underlinetext">Web</span> Studio</h2>
+            <p>We're a ctreative agency located in Brooklyn, New York. <br> We've won a ton of awards and have been featured in all if the magazines.</p>
+            <div class="infocards">
+                <div class="infocard">
+                    <img src="/Assets/umbrella.png" alt="umbrella image" height="50px" width="50px">
+                    <div class="info">
+                        <h3>We Care.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum obcaecati cum soluta corrupti. Nemo, quisquam.</p>
+                    </div>
+                </div>
+                <div class="infocard">
+                    <img src="/Assets/open-box.png" alt="open-box image" height="50px" width="50px">
+                    <div class="info">
+                        <h3>We Care.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum obcaecati cum soluta corrupti. Nemo, quisquam.</p>
+                    </div>
+                </div>
+                <div class="infocard">
+                    <img src="/Assets/paper-plane.png" alt="paper-plane image" height="50px" width="50px">
+                    <div class="info">
+                        <h3>We Care.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum obcaecati cum soluta corrupti. Nemo, quisquam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="highlightsec">
+            <div class="statscard">
+                <h1>3</h1>
+                <p>Co-worker</p>
+            </div>
+            <div class="statscard">
+                <h1>75</h1>
+                <p>Project Delivered</p>
+            </div>
+            <div class="statscard">
+                <h1>30</h1>
+                <p>Satisfied Clients</p>
+            </div>
+            <div class="statscard">
+                <h1>7</h1>
+                <p>Design Awards</p>
+            </div>
+        </div>
+        <div class="bottomdiv">
+            <h2>We Work fo<span class="underlinetext">r Yo</span>ur Success</h2>
+            <p>We believe in a diverse range of personel to bring creative skills,<br> thoughts, and ideas to the table.</p>
+        </div>
+    </div>
+</body>
+</html>
