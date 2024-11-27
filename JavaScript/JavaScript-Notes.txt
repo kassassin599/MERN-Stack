@@ -1,0 +1,130 @@
+                   // 1. Introduction to JavaScript
+// What is JavaScript?
+// JavaScript is a versatile programming language primarily used for creating interactive and dynamic content on the web. It can be used on both the client-side (in the browser) and server-side (using Node.js).
+
+xample
+// Let's start with a simple "H// Hello World Eello, World!" program.
+
+// In the Browser Console
+// Open your browser's developer tools (usually by pressing F12 or right-clicking and selecting "Inspect") and go to the "Console" tab. Type the following code and press Enter:
+
+console.log("Hello, World!");
+
+
+
+
+// In an HTML File
+// Create an HTML file (e.g., index.html) with the following content:
+
+
+
+    <script>
+        console.log("Hello, World!");
+    </script>
+
+
+
+
+                                    // 2. Basic Syntax
+// JavaScript Code Structure
+// JavaScript code can be written directly in an HTML file within <script> tags or in a separate .js file.
+
+
+
+                                        // Comments
+// Comments are used to explain code or to prevent execution.
+
+                                    // Single-line comment:
+
+// This is a single-line comment
+console.log("Hello, World!");
+
+                                // Multi-line comment:
+/* This is a 
+   multi-line comment */
+   console.log("Hello, World!");
+
+
+
+                        // 3. Variables and Data Types
+// Variables
+// Variables are used to store data. In JavaScript, you can declare variables using var, let, or const.
+
+                                // var
+
+var a = "this is varrrrrrrrrrrrrrrrrr";
+var a = "this is 2nd varrrrrrrrrrrrrrrrrr";
+ a = "this is 3rd varrrrrrrrrrrrrrrrrr";
+
+                                    // let
+let b = "hello from let";
+let b = "hello updated"; // An error in this line
+b = "this is udated";
+document.write(b + "<br>");
+
+                                    // const
+const c = 20;
+// const c = 20; //An error in this line
+// c = 30;
+document.write(c + "<br>");
+
+// var (older way, function-scoped)
+
+var message = "Hello, World!";
+console.log(message);
+
+// let (block-scoped, recommended for most cases)
+let message = "Hello, World!";
+console.log(message);
+
+// const (block-scoped, used for constants)
+const message = "Hello, World!";
+console.log(message);
+
+
+
+                            // Data Types
+// JavaScript has several data types:
+
+                                    // String: Text data
+let name = "technoglobe";
+document.write(name + "<br>");
+
+
+
+
+                                    // Number: Numeric data
+let age = 25;
+document.write(age + "<br>");
+
+
+
+
+                                    // Boolean: True or false
+let isStudent = true;
+document.write(isStudent + "<br>");
+
+
+
+
+                                // Null: Empty or non-existent value
+let emptyValue = null;
+document.write(emptyValue + "<br>");
+
+
+
+                                // Object: Complex data structures
+let person = { firstName: "IT", lastName: "Desk" };
+document.write(person[firstName]);
+
+document.write(person.firstName + " " + person.lastName);
+console.log(`${person.firstName + person.lastName} ${person.lastName}`); // Output: techno globe
+
+
+
+                                // Array: List of values
+let numbers = [1, 2, 3, 4, 5];
+document.write(numbers + "<br>");
+
+console.log(numbers); // Output: [1, 2, 3, 4, 5]
+
