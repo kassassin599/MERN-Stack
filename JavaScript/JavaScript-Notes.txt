@@ -128,3 +128,356 @@ document.write(numbers + "<br>");
 
 console.log(numbers); // Output: [1, 2, 3, 4, 5]
 
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+//                                     Operators
+
+// Operators in JavaScript are used to perform operations on variables and values. They are classified into different categories:
+
+
+
+Arithmetic Operators
+
+
+
++ (Addition): Adds two numbers.
+
+
+
+let a = 5;
+
+let b = 3;
+
+let sum = a + b; // 8
+
+
+
+
+
+- (Subtraction): Subtracts one number from another.
+
+
+
+let difference = a - b; // 2
+
+
+
+
+
+* (Multiplication): Multiplies two numbers.
+
+
+
+let product = a * b; // 15
+
+
+
+
+
+/ (Division): Divides one number by another.
+
+
+
+let quotient = a / b; // 1.6667
+
+
+
+
+
+% (Modulus): Returns the remainder of a division.
+
+
+
+let remainder = a % b; // 2
+
+
+
+
+
+++ (Increment): Increases a number by one.
+
+
+
+let c = 10;
+
+c++; // 11
+
+
+
+
+
+-- (Decrement): Decreases a number by one.
+
+
+
+c--; // 10
+
+
+
+
+
+Assignment Operators
+
+
+
+= (Assignment): Assigns a value to a variable.
+
+
+
+let x = 10;
+
+
+
+
+
++= (Addition Assignment): Adds a value to a variable.
+
+
+
+x += 5; // x = x + 5; // 15
+
+
+
+
+
+-= (Subtraction Assignment): Subtracts a value from a variable.
+
+
+
+x -= 3; // x = x - 3; // 12
+
+
+
+
+
+*= (Multiplication Assignment): Multiplies a variable by a value.
+
+
+
+x *= 2; // x = x * 2; // 24
+
+
+
+
+
+/= (Division Assignment): Divides a variable by a value.
+
+
+
+x /= 4; // x = x / 4; // 6
+
+
+
+
+
+%= (Modulus Assignment): Applies modulus to a variable.
+
+
+
+x %= 3; // x = x % 3; // 0
+
+
+
+
+
+Comparison Operators
+
+
+
+== (Equal to): Checks if two values are equal.
+
+a = 5 ;
+
+b = 5 ;
+
+let isEqual = (a == b); // true
+
+
+
+
+
+=== (Strict Equal to): Checks if two values and their types are equal.
+
+
+
+a = "5" ;
+
+b = 12 ;
+
+let isStrictEqual = (a === b); // false
+
+
+
+
+
+!= (Not Equal to): Checks if two values are not equal.
+
+
+
+let isNotEqual = (a != b); // true
+
+
+
+
+
+!== (Strict Not Equal to): Checks if two values and their types are not equal.
+
+a = "50" ;
+
+b = 45 ;
+
+let isStrictNotEqual = (a !== b); // true
+
+
+
+
+
+> (Greater than): Checks if one value is greater than another.
+
+a = 50 ;
+
+b = 45 ;
+
+
+
+let isGreater = (a > b); // true
+
+
+
+
+
+< (Less than): Checks if one value is less than another.
+
+a = 48 ;
+
+b = 45 ;
+
+
+
+let isLess = (a < b); // false
+
+
+
+
+
+>= (Greater than or Equal to): Checks if one value is greater than or equal to another.
+
+a = 48 ;
+
+b = 50 ;
+
+
+
+let isGreaterOrEqual = (a >= b); // true
+
+
+
+
+
+<= (Less than or Equal to): Checks if one value is less than or equal to another.
+
+a = 48 ;
+
+b = 50 ;
+
+
+
+
+
+let isLessOrEqual = (a <= b); // false
+
+
+
+
+
+Logical Operators
+
+
+
+&& (Logical AND): Returns true if both operands are true.
+
+a = 48 ;
+
+b = 50 ;
+
+
+
+let andResult = (a > b  && b > 1 ); // true
+
+
+
+
+
+|| (Logical OR): Returns true if at least one operand is true.
+
+a = 48 ;
+
+b = 50 ;
+
+
+
+let orResult = (a > b || b > 5); // true
+
+
+
+
+
+! (Logical NOT): Returns true if the operand is false.
+
+
+
+
+
+let notResult = !(a > b); // false
+
+
+
+
+
+                    Practical Examples
+
+
+
+                  Calculate the Area of a Circle
+
+
+
+let radius = 5;
+
+const pi = 3.14159;
+
+let area = pi * radius * radius;
+
+console.log("Area of the circle:", area); // Area of the circle: 78.53975
+
+Document.write();
+
+
+
+                    Check Voting Eligibility
+
+let age = 18;
+
+if (age >= 17) {
+
+    console.log("You are eligible to vote.");
+
+}
+
+
+
+else {
+
+    console.log("You are not eligible to vote.");
+
+}
+
+
