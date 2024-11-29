@@ -409,7 +409,10 @@ a = 48 ;
 b = 50 ;
 
 
-
+                  true      true  = true
+                  false      true  = false
+                  true      false  = false
+                  false      false  = false
 let andResult = (a > b  && b > 1 ); // true
 
 
@@ -423,7 +426,10 @@ a = 48 ;
 b = 50 ;
 
 
-
+                  false      false  = false
+                  true      true  = true
+                  false      true  = true
+                  true      false  = true
 let orResult = (a > b || b > 5); // true
 
 
