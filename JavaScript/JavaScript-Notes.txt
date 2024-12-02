@@ -893,3 +893,14 @@ document.write(person[firstName]);
 document.write(person.firstName + " " + person.lastName);
 
 console.log(`${person.firstName + person.lastName} ${person.lastName}`); // Output: techno globe
+
+
+
+
+
+------------------------------------------------------------------------------------------
+
+
+
+
+
