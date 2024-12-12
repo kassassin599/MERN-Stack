@@ -12,17 +12,34 @@
 
     
     <script>
-let numbers = [1, 2, 3, 7, 5];
-let moreNumbers = [6, 7, 8];
-
-let combinedArray = numbers.concat(moreNumbers);
-
-document.write(combinedArray); // Output: [1, 2, 4, 5, 6, 7, 8]
-
-document.write("<br>");
 
 
 
+
+
+function findMax(arr) {
+
+let min = arr[0]; 
+
+for (let i = 1; i < arr.length; i++) {
+          
+    if (arr[i] < min) {
+  
+        min = arr[i];
+
+    }
+
+}
+
+return max;
+
+}
+
+
+
+let maxNumber = findMax([5, 2, 9, 1, 7]);
+
+console.log("Maximum number:", maxNumber); // Output: Maximum number: 9
 
 
 

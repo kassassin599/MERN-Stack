@@ -1382,11 +1382,13 @@ numbers.forEach(function(element) {
 
 // Using map method
 
-let squaredNumbers = numbers.map(function(num) {
+let arr = function(num) {
 
     return num * num;
 
-});
+}
+
+let squaredNumbers = numbers.map(arr);
 
 console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
 
@@ -1557,6 +1559,8 @@ let result = findMinAndMax(numbers);
 console.log("Min:", result.min); // Output: Min: 1
 
 console.log("Max:", result.max); // Output: Max: 5
+
+
 
 
 
