@@ -13,51 +13,47 @@
 
     <script>
 
-// Empty object
+        // Empty object
 
-let emptyObject = {};
-
-
-
-// Object with properties
-
-let person = {
-
-    firstName: "John",
-
-    lastName: "Doe",
-
-    age: 30,
-
-    isStudent: false,
-
-    greet:  function() {
-
-        return "Hello, " + this.firstName + "!";
-
-    }
-
-};
+        let emptyObject = {};
 
 
 
-for (let key in person) {
+        // Object with properties
 
-if (typeof(person[key]) === 'function') {
+        let object = {
 
-    document.write(person[key]() + "<br>"); // Call the function here
+            type: "Laptop",
 
-} else {
+            manufacturer: "MSI",
 
-    document.write(key + ": " + person[key] + "<br>");
+            yearOfManufacturing: 2019,
 
-}
+            hasGPU: true,
 
-}
+            gameON: function () {
 
- 
+                return "Hello, I'm " + this.manufacturer +" "+this.type + ". Let's game!";
+
+            }
+
+        };
 
 
+
+        for (let key in object) {
+
+            if (typeof (object[key]) === 'function') {
+
+                document.write(object[key]() + "<br>"); 
+
+            } else {
+
+                document.write(key + ": " + object[key] + "<br>");
+
+            }
+
+        }
 
     </script>
 </body>
