@@ -1563,32 +1563,190 @@ console.log("Max:", result.max); // Output: Max: 5
 
 
 
+------------------------------------------------------------------------------------------------
+
+
+
+//  Objects
+
+// Objects in JavaScript are collections of key-value pairs. They are used to store complex data and are one of the fundamental data structures in the language.
+
+
+
+// Creating Objects
+
+// Objects are created using curly braces {} and contain properties (key-value pairs).
+
+// Empty object
+
+let emptyObject = {};
+
+
+
+// Object with properties
+
+let person = {
+
+    firstName: "John",
+
+    lastName: "Doe",
+
+    age: 30,
+
+    isStudent: false,
+
+    greet: function() {
+
+        return "Hello, " + this.firstName + "!";
+
+    }
+
+};
 
 
 
 
-// Sorting an Array
-
-// The sort() method sorts an array alphabetically:
-
-
-Example
-
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-fruits.sort();
-
-
-// Reversing an Array
-
-// The reverse() method reverses the elements in an array:
-
-
-Example
-
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-fruits.reverse();
 
 
 
+// Accessing Object Properties
+
+// Object properties can be accessed using dot notation (object.property) or bracket notation (object["property"]).
+
+console.log(person.firstName); // Output: John
+
+console.log(person["lastName"]); // Output: Doe
+
+
+
+
+
+// Modifying Object Properties
+
+// You can modify object properties by assigning new values to them.
+
+person.age = 35;
+
+console.log(person.age); // Output: 35
+
+
+
+
+
+// Adding and Removing Object Properties
+
+// You can add new properties to an object by simply assigning a value to a new key.
+
+person.city = "New York";
+
+console.log(person.city); // Output: New York
+
+
+
+
+
+// You can remove a property from an object using the delete keyword.
+
+delete person.isStudent;
+
+console.log(person); // Output: { firstName: "John", lastName: "Doe", age: 35, greet: function() { return "Hello, John!"; }, city: "New York" }
+
+
+
+
+
+// Object Methods
+
+// Objects can also contain methods (functions stored as object properties).
+
+console.log(person.greet()); // Output: Hello, John!
+
+
+
+
+
+// Object Iteration
+
+// You can iterate over object properties using for...in loop or Object.keys(), Object.values(), or Object.entries() methods.
+
+for (let key in person) {
+
+    console.log(key + ": " + person[key]);
+
+}
+
+// Output:
+
+// firstName: John
+
+// lastName: Doe
+
+// age: 35
+
+// greet: function() { return "Hello, John!"; }
+
+// city: New York
+
+
+
+for (let key in person) {
+
+    if (typeof(person[key]) === 'function') {
+
+        document.write(person[key]() + "<br>"); // Call the function here
+
+    } else {
+
+        document.write(key + ": " + person[key] + "<br>");
+
+    }
+
+}
+
+// output
+
+// firstName: John
+
+// lastName: Doe
+
+// age: 30
+
+// isStudent: false
+
+// Hello, John!
+
+
+
+// Object Constructor
+
+// You can create objects using a constructor function and new keyword.
+
+
+
+class Car {
+
+    constructor(make, model, year) {
+
+        this.make = make;
+
+        this.model = model;
+
+        this.year = year;
+
+    }
+
+}
+
+
+
+let myCar = new Car("Toyota", "Camry", 2020);
+
+console.log(myCar); // Output: Car { make: "Toyota", model: "Camry", year: 2020 }
+
+// document.write(myCar.model); // Output: Car { make: "Toyota", model: "Camry", year: 2020 }
+
+// for (let key in myCar) {
+
+//     document.write(key + ": " + myCar[key] + "<br>");
+
+// }

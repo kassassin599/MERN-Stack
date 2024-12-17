@@ -10,40 +10,56 @@
 <body>
 
 
-    
+
     <script>
 
+// Empty object
+
+let emptyObject = {};
 
 
 
+// Object with properties
 
-function findMax(arr) {
+let person = {
 
-let min = arr[0]; 
+    firstName: "John",
 
-for (let i = 1; i < arr.length; i++) {
-          
-    if (arr[i] < min) {
-  
-        min = arr[i];
+    lastName: "Doe",
+
+    age: 30,
+
+    isStudent: false,
+
+    greet:  function() {
+
+        return "Hello, " + this.firstName + "!";
 
     }
 
+};
+
+
+
+for (let key in person) {
+
+if (typeof(person[key]) === 'function') {
+
+    document.write(person[key]() + "<br>"); // Call the function here
+
+} else {
+
+    document.write(key + ": " + person[key] + "<br>");
+
 }
 
-return max;
-
 }
 
-
-
-let maxNumber = findMax([5, 2, 9, 1, 7]);
-
-console.log("Maximum number:", maxNumber); // Output: Maximum number: 9
+ 
 
 
 
-</script>
+    </script>
 </body>
 
 </html>
