@@ -6,56 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
 
+  
+    <!-- <p class="intro">Hello World!.</p> -->
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+    
+    <p id="demo"></p>
+    
+   <script>
+const x = document.querySelector("p.intro");
+document.getElementById("demo").innerHTML = 
+ x.innerHTML + "<br> this is an example of querySelector";
 
 
-    <script>
-
-        // Empty object
-
-        let emptyObject = {};
-
-
-
-        // Object with properties
-
-        let object = {
-
-            type: "Laptop",
-
-            manufacturer: "MSI",
-
-            yearOfManufacturing: 2019,
-
-            hasGPU: true,
-
-            gameON: function () {
-
-                return "Hello, I'm " + this.manufacturer +" "+this.type + ". Let's game!";
-
-            }
-
-        };
-
-
-
-        for (let key in object) {
-
-            if (typeof (object[key]) === 'function') {
-
-                document.write(object[key]() + "<br>"); 
-
-            } else {
-
-                document.write(key + ": " + object[key] + "<br>");
-
-            }
-
-        }
-
-    </script>
+   </script>
 </body>
-
 </html>

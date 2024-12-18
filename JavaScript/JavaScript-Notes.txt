@@ -1750,3 +1750,306 @@ console.log(myCar); // Output: Car { make: "Toyota", model: "Camry", year: 2020 
 //     document.write(key + ": " + myCar[key] + "<br>");
 
 // }
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+// DOM (Document Object Model) manipulation in JavaScript involves interacting with and modifying the structure, style, and content of a webpage. The DOM represents the document as a tree of nodes, where each node corresponds to part of the page.
+
+// Key Parts of the DOM
+// Document Node: This is the root of the DOM tree. It represents the entire HTML document.
+
+// Element Nodes: These nodes represent HTML elements (like <div>, <p>, <a>, etc.). They can have attributes and child nodes.
+
+// Text Nodes: These nodes represent the text inside an element. For example, in <p>Hello</p>, "Hello" is a text node.
+
+// Attribute Nodes: These nodes represent attributes of elements (like class, id, href, etc.).
+
+// Comment Nodes: These nodes represent comments within the HTML.
+
+// Practical Examples of DOM Manipulation
+// 1. Selecting Elements
+// To manipulate elements, you first need to select them. Common methods include:
+
+// document.getElementById('id'): Selects an element by its ID.
+// document.getElementsByClassName('class'): Selects elements by their class name.
+// document.getElementsByTagName('tag'): Selects elements by their tag name.
+// document.querySelector('selector'): Selects the first element that matches a CSS selector.
+// document.querySelectorAll('selector'): Selects all elements that match a CSS selector.
+
+
+// Example:
+
+//                                   1. Selecting Elements by ID
+<body>
+
+<h2>My First Page</h2>
+
+<p id="demo"></p>
+</body>
+
+document.getElementById("demo").innerHTML = "Hello World!";
+
+// **Understanding the HTML DOM Document Object**
+
+// The document object represents your web page.
+
+// To interact with any part of an HTML page, you always start by accessing the document object.
+
+// Here are some ways to use the document object to work with HTML:
+
+// **Finding HTML Elements**
+// - `document.getElementById(id)`              : Find an element by its ID.
+// - `document.getElementsByTagName(name)`      : Find elements by their tag name.
+// - `document.getElementsByClassName(name)`    : Find elements by their class name.
+
+// **Changing HTML Elements**
+// - `element.innerHTML = new html content`     : Update the content inside an element.
+// - `element.attribute = new value`            : Change the value of an attribute in an element.
+// - `element.style.property = new style`       : Update the style of an element.
+// - `element.setAttribute(attribute, value)`   : Set a new value for an attribute in an element.
+
+// **Adding and Removing Elements**
+// - `document.createElement(element)`          : Create a new HTML element.
+// - `document.removeChild(element)`            : Remove an HTML element.
+// - `document.appendChild(element)`            : Add a new HTML element.
+// - `document.replaceChild(new, old)`          : Replace an old HTML element with a new one.
+// - `document.write(text)`                     : Write text directly into the HTML document.
+
+
+
+
+// example
+<body>
+    <h1 id="title">Hello, World!</h1>
+    <button id="changeText">Change Text</button>
+    <script src="script.js">
+
+    </script>
+</body>
+
+
+
+// JavaScript (script.js):
+
+// Select the element with the ID 'title'
+const titleElement = document.getElementById('title');
+
+// Select the element with the ID 'changeText'
+const buttonElement = document.getElementById('changeText');
+
+// Add an event listener to the button
+buttonElement.addEventListener('click', () => {
+    // Change the text content of the title element
+    titleElement.textContent = 'Text Changed!';
+});
+
+
+//                           2. Selecting Elements by Class Name
+
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <button id="highlightBoxes">Highlight Boxes</button>
+</body>
+
+// JavaScript (script.js):
+
+// Select all elements with the class 'box'
+const boxes = document.getElementsByClassName('box');
+
+// Select the button element
+const highlightButton = document.getElementById('highlightBoxes');
+
+// Add an event listener to the button
+highlightButton.addEventListener('click', () => {
+    // Loop through each box and change its background color
+    for (const box of boxes) {
+        box.style.backgroundColor = 'yellow';
+    }
+});
+
+
+//                               3. Selecting Elements by Tag Name
+
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <button id="highlightParagraphs">Highlight Paragraphs</button>
+</body>
+
+// JavaScript (script.js):
+
+
+// Select all <p> elements
+const paragraphs = document.getElementsByTagName('p');
+
+// Select the button element
+const highlightParagraphsButton = document.getElementById('highlightParagraphs');
+
+// Add an event listener to the button
+highlightParagraphsButton.addEventListener('click', () => {
+    // Loop through each paragraph and change its color
+    for (const paragraph of paragraphs) {
+        paragraph.style.color = 'blue';
+    }
+});
+
+
+
+//                               4. Selecting Elements by Query Selector
+// If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelectorAll() method.
+// This example returns a list of all <p> elements with class="intro".
+
+<body>
+    <div class="container">
+        <p class="text">First paragraph</p>
+        <p class="text">Second paragraph</p>
+        <p class="text">Third paragraph</p>
+    </div>
+    <button id="changeTextColor">Change Text Color</button>
+</body>
+
+// JavaScript (script.js):
+
+// Select the first element with the class 'text'
+const firstTextElement = document.querySelector('.text');
+
+// Select all elements with the class 'text'
+const allTextElements = document.querySelectorAll('.text');
+
+// Select the button element
+const changeTextColorButton = document.getElementById('changeTextColor');
+
+// Add an event listener to the button
+changeTextColorButton.addEventListener('click', () => {
+    // Loop through all text elements and change their color
+    allTextElements.forEach(textElement => {
+        textElement.style.color = 'red';
+    });
+});
+
+// example:1 for querySelector
+<body>
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo"></p>
+</body>
+
+const x = document.querySelector("p.intro");
+document.getElementById("demo").innerHTML = 
+ x.innerHTML + "<br> this is an example of querySelector";
+
+
+
+// Example:2 for querySelectorAll
+<body>
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo"></p>
+
+</body>
+
+const x = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+
+
+// example:3 querySelectorAll
+<body>
+    <div class="container">
+        <p class="text">First paragraph</p>
+        <p class="text">Second paragraph</p>
+        <p class="text">Third paragraph</p>
+    </div>
+       <p id="demo">Third paragraph</p>
+</body>
+   
+        // Selecting all elements with the class 'text'
+        let x = document.querySelectorAll('.text');
+        
+     
+        document.getElementById("demo").innerHTML = 
+		'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+         x.forEach((paragraph) => {
+            document.write(`${paragraph.textContent + "<br>"}`);
+        });
+ 
+// example 4:
+
+    // <style>
+        .highlight {
+            background-color: yellow;
+        }
+    // </style>
+
+<body>
+    <h1>Example Page</h1>
+    <p class="info">This is the first paragraph.</p>
+    <p class="info">This is the second paragraph.</p>
+    <p>This is a regular paragraph.</p>
+    <button id="highlightButton">Highlight Text</button>
+
+</body>
+
+        // Select the button element
+        let button = document.querySelector('#highlightButton');
+
+        // Add an event listener to the button
+        button.addEventListener('click', () => {
+            // Select the first paragraph with the class 'info'
+            let firstInfoParagraph = document.querySelector('.info');
+            firstInfoParagraph.classList.add('highlight');
+
+            // Select all paragraphs with the class 'info'
+            let allInfoParagraphs = document.querySelectorAll('.info');
+            allInfoParagraphs.forEach(paragraph => {
+                paragraph.classList.add('highlight');
+            });
+        });
+
+
+
+
+
+// Summary
+// By ID: Use document.getElementById('id') to select a single element by its ID.
+// By Class Name: Use document.getElementsByClassName('className') to select multiple elements by their class name.
+// By Tag Name: Use document.getElementsByTagName('tagName') to select elements by their tag name.
+// By Query Selector: Use document.querySelector('selector') to select the first element that matches a CSS selector, or document.querySelectorAll('selector') to select all elements that match.
+
+
+<body>
+    <p id="myParagraph">Hello, World!</p>
+    <button id="changeText">Change Text</button>
+</body>
+
+        // Select elements
+        const paragraph = document.getElementById('myParagraph');
+        const button = document.getElementById('changeText');
+
+        // Add an event listener to the button
+        button.addEventListener('click', () => {
+            // Change the text of the paragraph
+            paragraph.textContent = 'Text changed!';
+        });
+
