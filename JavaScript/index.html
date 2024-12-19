@@ -7,43 +7,54 @@
   </head>
   <body>
     <div class="container">
-        <p class="text">First paragraph</p>
-        <p class="text">Second paragraph</p>
-        <p class="text">Third paragraph</p>
+      <p class="text">First paragraph</p>
+      <p class="text">Second paragraph</p>
+      <p class="text">Third paragraph</p>
+    </div>
+    <div class="container" id="secondDiv">
+      <p class="text">First paragraph</p>
+      <p class="text">Second paragraph</p>
+      <p class="text">Third paragraph</p>
     </div>
     <button id="changeTextColor">Change Text Color</button>
 
     <script>
-     // Select the first element with the class 'text'
-const firstTextElement = document.querySelector('.text');
 
-// Select all elements with the class 'text'
-const allTextElements = document.querySelectorAll('.text');
+        const firstDivContainer = document.getElementById("secondDiv");
 
-// Select the button element
-const changeTextColorButton = document.getElementById('changeTextColor');
+      // Select the first element with the class 'text'
+      const firstTextElement = document.querySelector(".text");
 
-let isColorChanged = false;
+      // Select all elements with the class 'text'
+      const allTextElements = document.querySelectorAll(".text");
 
-// Add an event listener to the button
-changeTextColorButton.addEventListener('click', () => {
+      // Select the button element
+      const changeTextColorButton = document.getElementById("changeTextColor");
 
-    if(!isColorChanged){
-        // Loop through all text elements and change their color
-        allTextElements.forEach(textElement => {
-            textElement.style.color = 'red';
-        });
-        firstTextElement.style.color = 'blue';
-        isColorChanged = true;
-    }
-    else{
-        allTextElements.forEach(textElement => {
-            textElement.style.color = 'black';
-        });
-        isColorChanged = false;
-    }
-});
+      let isColorChanged = false;
 
+      // Add an event listener to the button
+      changeTextColorButton.addEventListener("click", () => {
+        if (!isColorChanged) {
+          // Loop through all text elements and change their color
+          allTextElements.forEach((textElement) => {
+            textElement.style.color = "red";
+          });
+          firstTextElement.style.color = "blue";
+          firstTextElement.innerHTML = "First paragraph now in blue color";
+          changeTextColorButton.textContent = "Go Back";
+          firstDivContainer.style.display = 'none';
+          isColorChanged = true;
+        } else {
+            allTextElements.forEach((textElement) => {
+                textElement.style.color = "black";
+            });
+            firstTextElement.innerHTML = "First paragraph";
+            changeTextColorButton.textContent = "Change Text Color";
+            firstDivContainer.style.display = 'block';
+          isColorChanged = false;
+        }
+      });
     </script>
   </body>
 </html>
