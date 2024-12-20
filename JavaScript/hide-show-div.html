@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="text">First paragraph</p>
+      <p class="text">Second paragraph</p>
+      <p class="text">Third paragraph</p>
+    </div>
+    <div class="container" id="secondDiv">
+      <p class="text">First paragraph</p>
+      <p class="text">Second paragraph</p>
+      <p class="text">Third paragraph</p>
+    </div>
+    <button id="changeTextColor">Change Text Color</button>
+
+    <script>
+
+        const firstDivContainer = document.getElementById("secondDiv");
+
+      // Select the first element with the class 'text'
+      const firstTextElement = document.querySelector(".text");
+
+      // Select all elements with the class 'text'
+      const allTextElements = document.querySelectorAll(".text");
+
+      // Select the button element
+      const changeTextColorButton = document.getElementById("changeTextColor");
+
+      let isColorChanged = false;
+
+      // Add an event listener to the button
+      changeTextColorButton.addEventListener("click", () => {
+        if (!isColorChanged) {
+          // Loop through all text elements and change their color
+          allTextElements.forEach((textElement) => {
+            textElement.style.color = "red";
+          });
+          firstTextElement.style.color = "blue";
+          firstTextElement.innerHTML = "First paragraph now in blue color";
+          changeTextColorButton.textContent = "Go Back";
+          firstDivContainer.style.display = 'none';
+          isColorChanged = true;
+        } else {
+            allTextElements.forEach((textElement) => {
+                textElement.style.color = "black";
+            });
+            firstTextElement.innerHTML = "First paragraph";
+            changeTextColorButton.textContent = "Change Text Color";
+            firstDivContainer.style.display = 'block';
+          isColorChanged = false;
+        }
+      });
+    </script>
+  </body>
+</html>

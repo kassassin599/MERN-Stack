@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            /* animation: animate 2s linear 0s infinite normal; */
+        }
+
+        @keyframes animate {
+            from{
+                transform: scale(0%);
+            }
+            to{
+                transform: scale(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">naman</h1>
+    <button id="button">Go</button>
+    <script>
+        const goButton = document.getElementById("button");
+        const nameHeader = document.getElementById("header");
+        goButton.addEventListener('click',()=>{
+            nameHeader.style.animation = 'animate 2s linear 0s infinite normal';
+        });
+    </script>
+</body>
+</html>

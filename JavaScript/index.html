@@ -6,55 +6,41 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
-      <p class="text">First paragraph</p>
-      <p class="text">Second paragraph</p>
-      <p class="text">Third paragraph</p>
-    </div>
-    <div class="container" id="secondDiv">
-      <p class="text">First paragraph</p>
-      <p class="text">Second paragraph</p>
-      <p class="text">Third paragraph</p>
-    </div>
-    <button id="changeTextColor">Change Text Color</button>
+    <style>
 
-    <script>
+      .text {
 
-        const firstDivContainer = document.getElementById("secondDiv");
+          display: block;
 
-      // Select the first element with the class 'text'
-      const firstTextElement = document.querySelector(".text");
+      }
 
-      // Select all elements with the class 'text'
-      const allTextElements = document.querySelectorAll(".text");
+      .hidden {
 
-      // Select the button element
-      const changeTextColorButton = document.getElementById("changeTextColor");
+          display: none; /* Yeh class use karenge */
 
-      let isColorChanged = false;
+      }
 
-      // Add an event listener to the button
-      changeTextColorButton.addEventListener("click", () => {
-        if (!isColorChanged) {
-          // Loop through all text elements and change their color
-          allTextElements.forEach((textElement) => {
-            textElement.style.color = "red";
-          });
-          firstTextElement.style.color = "blue";
-          firstTextElement.innerHTML = "First paragraph now in blue color";
-          changeTextColorButton.textContent = "Go Back";
-          firstDivContainer.style.display = 'none';
-          isColorChanged = true;
-        } else {
-            allTextElements.forEach((textElement) => {
-                textElement.style.color = "black";
-            });
-            firstTextElement.innerHTML = "First paragraph";
-            changeTextColorButton.textContent = "Change Text Color";
-            firstDivContainer.style.display = 'block';
-          isColorChanged = false;
-        }
-      });
-    </script>
+  </style>
+
+
+
+  <p id="text" class="text">click</p>
+
+  <button onclick="hidefunc()">hide paragraph</button>
+
+
+
+  <script>
+
+      function hidefunc() {
+
+          let para = document.getElementById("text");
+
+          para.classList.add("hidden"); // Class add kar rahe hain
+
+      }
+
+  </script>
+
   </body>
 </html>

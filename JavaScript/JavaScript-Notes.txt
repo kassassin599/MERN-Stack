@@ -2053,3 +2053,283 @@ document.getElementById("demo").innerHTML =
             paragraph.textContent = 'Text changed!';
         });
 
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+//                       Creating and Appending Elements
+
+// You can create new elements and append them to the DOM.
+
+
+
+// Example:1
+
+
+
+<body>
+
+    <div id="container"></div>
+
+    <button id="addElement">Add Element</button>
+
+</body>
+
+ 
+
+        const container = document.getElementById('container');
+
+        const button = document.getElementById('addElement');
+
+
+
+        button.addEventListener('click', () => {
+
+            // Create a new paragraph element
+
+            const newParagraph = document.createElement('p');
+
+            newParagraph.textContent = 'A new paragraph!';
+
+            
+
+            // Append the new element to the container
+
+            container.appendChild(newParagraph);
+
+        });
+
+ 
+
+// example:2
+
+
+
+<body>
+
+    <div id="appendcontainer"></div>
+
+    <div id="prependcontainer"></div>
+
+    <button id="addappendElement">Add append Element</button> <br>
+
+    <button id="addprependElement">Add prepend Element</button>
+
+   </body>
+
+
+
+
+
+        const prependcontainer = document.getElementById('prependcontainer');
+
+        const prependbutton = document.getElementById('addprependElement');
+
+
+
+        prependbutton.addEventListener('click', () => {
+
+            // Create a new paragraph element
+
+            const newParagraph = document.createElement('p');
+
+            newParagraph.textContent = 'A new prepend paragraph!';
+
+            
+
+            // Prepend the new element to the container
+
+            prependcontainer.prepend(newParagraph);
+
+        });
+
+
+
+        const appendcontainer = document.getElementById('appendcontainer');
+
+        const appendbutton = document.getElementById('addappendElement');
+
+
+
+        appendbutton.addEventListener('click', () => {
+
+            // Create a new paragraph element
+
+            const newappendParagraph = document.createElement('p');
+
+            newappendParagraph.textContent = 'A new append paragraph!';
+
+            
+
+            // Append the new element to the container
+
+            appendcontainer.appendChild(newappendParagraph);
+
+        });
+
+
+
+
+
+
+
+
+
+//                                        6. Modifying Attributes
+
+// You can change the attributes of an element.
+
+
+
+// Example:
+
+
+
+
+
+<body>
+
+    <img id="myImage" src="image.jpg" alt="Old Image">
+
+    <button id="changeImage">Change Image</button>
+
+</body>
+
+
+
+        const image = document.getElementById('myImage');
+
+        const button = document.getElementById('changeImage');
+
+
+
+        button.addEventListener('click', () => {
+
+            // Change the source and alt attributes of the image
+
+            image.src = 'new-image.jpg';
+
+            image.alt = 'New Image';
+
+        });
+
+
+
+{/*                              7. Removing Elements 
+
+You can also remove elements from the DOM.  */}
+
+
+
+{/* Example: */}
+
+
+
+
+
+<body>
+
+    <div id="toBeRemoved">This will be removed.</div>
+
+    <button id="removeElement">Remove Element</button>
+
+</body>
+
+
+
+        const element = document.getElementById('toBeRemoved');
+
+        const button = document.getElementById('removeElement');
+
+
+
+        button.addEventListener('click', () => {
+
+            // Remove the element from the DOM
+
+            element.remove();
+
+        });
+
+
+
+{/* Example: */}
+
+
+
+<body>
+
+    <form id="myForm">
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="greeting"></p>
+
+
+
+ </body>
+
+
+
+   document.getElementById('myForm').addEventListener('submit', (event) => {
+
+    event.preventDefault();
+
+    const nameInput = document.getElementById('nameInput').value;
+
+    const greeting = document.getElementById('greeting');
+
+    greeting.textContent = `Hello, ${nameInput}` ;
+
+});
+
+
+
+
+
+                                                        {/* Example: hide and show */}
+
+        <style>
+
+        .text {
+
+            display: block;
+
+        }
+
+        .hidden {
+
+            display: none; /* Yeh class use karenge */
+
+        }
+
+    </style>
+
+
+
+    <p id="text" class="text">click</p>
+
+    <button onclick="hidefunc()">hide paragraph</button>
+
+
+
+    <script>
+
+        function hidefunc() {
+
+            let para = document.getElementById("text");
+
+            para.classList.add("hidden"); // Class add kar rahe hain
+
+        }
+
+    </script>
+
+
+
