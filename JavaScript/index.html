@@ -22,17 +22,19 @@
 
   </style>
 
-
+  <div id="login"></div>
 
   <p id="text" class="text">click</p>
 
   <button onclick="hidefunc()">hide paragraph</button>
+  <button onclick="document.getElementById('text').classList.remove('hidden')">show paragraph</button>
 
 
 
   <script>
 
       function hidefunc() {
+
 
           let para = document.getElementById("text");
 
