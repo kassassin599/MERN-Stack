@@ -20,14 +20,29 @@
 
       }
 
+      .stylizetext{
+        color: red;
+        font-size: large;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      
+      .stylizetext::after{
+        content: " here to continue";
+      }
+
   </style>
 
   <div id="login"></div>
 
   <p id="text" class="text">click</p>
 
-  <button onclick="hidefunc()">hide paragraph</button>
-  <button onclick="document.getElementById('text').classList.remove('hidden')">show paragraph</button>
+  <button onclick="hidefunc()">hide paragraph</button><br>
+  <button onclick="document.getElementById('text').classList.remove('hidden')">show paragraph</button><br>
+  <button onclick="document.getElementById('text').classList.add('stylizetext')">Style text</button><br>
+  <button onclick="document.getElementById('text').classList.remove('stylizetext')">Undo text</button><br>
 
 
 
