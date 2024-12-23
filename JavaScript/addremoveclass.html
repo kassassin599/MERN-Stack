@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+
+      .text {
+
+          display: block;
+
+      }
+
+      .hidden {
+
+          display: none; /* Yeh class use karenge */
+
+      }
+
+      .stylizetext{
+        color: red;
+        font-size: large;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      
+      .stylizetext::after{
+        content: " here to continue";
+      }
+
+  </style>
+
+  <div id="login"></div>
+
+  <p id="text" class="text">click</p>
+
+  <button onclick="hidefunc()">hide paragraph</button><br>
+  <button onclick="document.getElementById('text').classList.remove('hidden')">show paragraph</button><br>
+  <button onclick="document.getElementById('text').classList.add('stylizetext')">Style text</button><br>
+  <button onclick="document.getElementById('text').classList.remove('stylizetext')">Undo text</button><br>
+
+
+
+  <script>
+
+      function hidefunc() {
+
+
+          let para = document.getElementById("text");
+
+          para.classList.add("hidden"); // Class add kar rahe hain
+
+      }
+
+  </script>
+
+  </body>
+</html>

@@ -7,57 +7,75 @@
   </head>
   <body>
     <style>
-
-      .text {
-
-          display: block;
-
+      #card{
+        height: 400px;
+        width: 300px;
+        background-color: blueviolet;
+        border: 5px solid black;
+        border-radius: 10px;
+        overflow: hidden;
       }
-
-      .hidden {
-
-          display: none; /* Yeh class use karenge */
-
-      }
-
-      .stylizetext{
-        color: red;
+      h3{
+        text-align: center;
+        color: rgb(255, 255, 195);
         font-size: large;
+        text-decoration: underline;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-transform: uppercase;
-        border: 2px solid black;
-        border-radius: 5px;
       }
+      h4{
+        text-align: center;
+        color: rgb(181, 255, 125);
+        font-size: medium;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+      }
+    </style>
+
+    <form id="myForm">
+
+      <input type="text" id="nameInput" placeholder="Enter your full name">
+      <input type="text" id="designationInput" placeholder="Enter your designation">
       
-      .stylizetext::after{
-        content: " here to continue";
-      }
+      <button type="submit">Submit</button>
 
-  </style>
+    </form>
 
-  <div id="login"></div>
+    <p id="greeting"></p><br><br><br><br><br>
 
-  <p id="text" class="text">click</p>
+    <div id="cards">
 
-  <button onclick="hidefunc()">hide paragraph</button><br>
-  <button onclick="document.getElementById('text').classList.remove('hidden')">show paragraph</button><br>
-  <button onclick="document.getElementById('text').classList.add('stylizetext')">Style text</button><br>
-  <button onclick="document.getElementById('text').classList.remove('stylizetext')">Undo text</button><br>
+    </div>
 
+    <!-- <div id="card">
+      <img src="/logo.png" alt="profile-image" width="100%" height="300px" style="background-color: cadetblue;">
+      <h3 id="name"></h3>
+      <h3 id="designation"></h3>
+    </div> -->
 
+    <script> 
+      
+      document.getElementById('myForm').addEventListener('submit', (event) => {
 
-  <script>
+      event.preventDefault();
+  
+      const nameInput = document.getElementById('nameInput').value;
+      const designationInput = document.getElementById('designationInput').value;
+  
+      const greeting = document.getElementById('greeting');
+  
+      greeting.textContent = `Hello, ${nameInput}, ${designationInput}` ;
 
-      function hidefunc() {
+      const cards = document.getElementById('cards');
 
-
-          let para = document.getElementById("text");
-
-          para.classList.add("hidden"); // Class add kar rahe hain
-
-      }
-
-  </script>
+      cards.innerHTML = `<div id="card">
+        <img src="/logo.png" alt="profile-image" width="100%" height="300px" style="background-color: cadetblue;">
+        <h3 id="name">${nameInput}</h3>
+        <h4 id="designation">${designationInput}</h4>
+        </div>`;
+  
+      });
+    </script>
 
   </body>
 </html>
