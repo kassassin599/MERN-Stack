@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      #card{
+        height: 400px;
+        width: 300px;
+        background-color: blueviolet;
+        border: 5px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      h3{
+        text-align: center;
+        color: rgb(255, 255, 195);
+        font-size: large;
+        text-decoration: underline;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+      }
+      h4{
+        text-align: center;
+        color: rgb(181, 255, 125);
+        font-size: medium;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+      }
+    </style>
+
+    <form id="myForm">
+
+      <input type="text" id="nameInput" placeholder="Enter your full name">
+      <input type="text" id="designationInput" placeholder="Enter your designation">
+      
+      <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="greeting"></p><br><br><br><br><br>
+
+    <div id="cards">
+
+    </div>
+
+    <!-- <div id="card">
+      <img src="/logo.png" alt="profile-image" width="100%" height="300px" style="background-color: cadetblue;">
+      <h3 id="name"></h3>
+      <h3 id="designation"></h3>
+    </div> -->
+
+    <script> 
+      
+      document.getElementById('myForm').addEventListener('submit', (event) => {
+
+      event.preventDefault();
+  
+      const nameInput = document.getElementById('nameInput').value;
+      const designationInput = document.getElementById('designationInput').value;
+  
+      const greeting = document.getElementById('greeting');
+  
+      greeting.textContent = `Hello, ${nameInput}, ${designationInput}` ;
+
+      const cards = document.getElementById('cards');
+
+      cards.innerHTML = `<div id="card">
+        <img src="/logo.png" alt="profile-image" width="100%" height="300px" style="background-color: cadetblue;">
+        <h3 id="name">${nameInput}</h3>
+        <h4 id="designation">${designationInput}</h4>
+        </div>`;
+  
+      });
+    </script>
+
+  </body>
+</html>
