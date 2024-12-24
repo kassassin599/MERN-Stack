@@ -7,42 +7,6 @@
   </head>
   <body>
    
-
-    <!-- <div id="card">
-      <img src="/logo.png" alt="profile-image" width="100%" height="300px" style="background-color: cadetblue;">
-      <h3 id="name"></h3>
-      <h3 id="designation"></h3>
-    </div> -->
-
-    <!-- <script>
-      document.getElementById("myForm").addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        const nameInput = document.getElementById("nameInput").value;
-        const designationInput =
-          document.getElementById("designationInput").value;
-
-        const greeting = document.getElementById("greeting");
-
-        greeting.textContent = `Hello, ${nameInput}, ${designationInput}`;
-
-        const cards = document.getElementById("cards");
-
-        cards.innerHTML = `<div id="card" class="bwfilter" onmouseover="handleMouseOver()" onmouseout="handleMouseOut()">
-        <img id="profilepic" src="/profile-pic.png" alt="profile-image" width="100%" height="300px" style="background-image: linear-gradient(blue, cadetblue); ">
-        <h3 id="name">${nameInput}</h3>
-        <h4 id="designation">${designationInput}</h4>
-        </div>`;
-      });
-
-      function handleMouseOver() {
-        document.getElementById("card").classList.remove("bwfilter");
-      }
-
-      function handleMouseOut() {
-        document.getElementById("card").classList.add("bwfilter");
-      }
-    </script> -->
     <style>
       #cards {
         display: grid;
@@ -85,13 +49,16 @@
     </style>
 
     <form id="myForm">
-      <input type="text" id="nameInput" placeholder="Enter your full name" />
+      <label for="nameInput">Full Name: </label>
+      <input type="text" id="nameInput" placeholder="Enter your full name" /><br>
+      <label for="designationInput">Designation: </label>
       <input
-        type="text"
-        id="designationInput"
-        placeholder="Enter your designation"
-      />
-
+      type="text"
+      id="designationInput"
+      placeholder="Enter your designation"
+      /> <br>
+      <label for="imageInput">Profile Picture: </label>
+      <input type="file" id="imageInput" accept="image/*" /> <br>
       <button type="submit">Submit</button>
     </form>
     
@@ -105,6 +72,7 @@
 
         const nameInput = document.getElementById("nameInput").value;
         const designationInput = document.getElementById("designationInput").value;
+        const imageInput = document.getElementById("imageInput").files[0];
 
         const greeting = document.getElementById("greeting");
         greeting.textContent = `Hello, ${nameInput}, ${designationInput}`;
@@ -116,17 +84,30 @@
         card.onmouseover = () => card.classList.remove("bwfilter");
         card.onmouseout = () => card.classList.add("bwfilter");
 
-        card.innerHTML = `
-          <img src="/profile-pic.png" alt="profile-image" width="100%" height="300px" style="background-image: linear-gradient(blue, cadetblue);">
-          <h3>${nameInput}</h3>
-          <h4>${designationInput}</h4>
-        `;
+        if (imageInput) {
+          const cards = document.getElementById("cards");
+          const card = document.createElement("div");
+          card.className = "card bwfilter";
+          card.onmouseover = () => card.classList.remove("bwfilter");
+          card.onmouseout = () => card.classList.add("bwfilter");
 
-        cards.appendChild(card);
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            card.innerHTML = `
+              <img src="${e.target.result}" alt="profile-image" width="100%" height="300px" style="background-image: linear-gradient(blue, cadetblue);">
+              <h3>${nameInput}</h3>
+              <h4>${designationInput}</h4>
+            `;
+            cards.appendChild(card);
+          };
+          reader.readAsDataURL(imageInput);
+        }
+
 
         // Clear input fields after submission
         document.getElementById("nameInput").value = "";
         document.getElementById("designationInput").value = "";
+        document.getElementById("imageInput").value = "";
       });
     </script>
   </body>
