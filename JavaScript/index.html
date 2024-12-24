@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-    <title>Mouseover and Mouseout Example</title>
-
-
-    <script>
-window.addEventListener('resize', function() {
-
-    console.log('Window resized');
-
-});
-
-
-  </script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
+  
+  <div id="myDiv"><b>Welcome</b> to my page!</div>
 
-  <p>The window load event will trigger an alert when the page is fully loaded.</p>
 
-
+  <script>
+    let div = document.getElementById("myDiv");
+  
+    // Reading textContent
+    console.log(div.textContent); // Output: Welcome to my page!
+  
+    // Updating textContent
+    div.textContent = "Hello, User!";
+  </script>
 </body>
-
 </html>

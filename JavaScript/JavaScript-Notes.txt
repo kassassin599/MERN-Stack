@@ -2335,7 +2335,95 @@ You can also remove elements from the DOM.  */}
 
 -------------------------------------------------------------------------------------------
 
+**`innerHTML`**, **`innerText`**, aur **`textContent`** teen tarike hain kisi HTML element ke andar ki value ko read ya update karne ke liye. Inka kaam thoda alag hota hai
+---
 
+
+
+
+1. `innerHTML`
+Yeh property kisi element ke andar ke HTML content ko represent karti hai. Agar aapko element ke andar HTML tags bhi chahiye ya naya HTML add karna hai, toh aap `innerHTML` ka use karte hain.  
+
+#### Example:
+
+
+<div id="myDiv"><b>Welcome</b> to my page!</div>
+
+
+<script>
+  let div = document.getElementById("myDiv");
+
+  // Reading innerHTML
+  console.log(div.innerHTML); // Output: <b>Welcome</b> to my page!
+
+  // Updating innerHTML
+  div.innerHTML = "<i>Hello</i>, User!";
+</script>
+
+ 
+
+innerHTML mai HTML tags maintain hote hain. 
+
+---
+
+2. `innerText`
+Yeh property screen par dikhte hue text ko represent karti hai. Agar HTML tags hain, toh wo ignore ho jaate hain aur sirf visible text milta hai.  
+
+#### Example:
+<div id="myDiv"><b>Welcome</b> to my page!</div>
+
+<script>
+  let div = document.getElementById("myDiv");
+
+  // Reading innerText
+  console.log(div.innerText); // Output: Welcome to my page!
+
+  // Updating innerText
+  div.innerText = "Hello, User!";
+</script>
+
+  
+
+innerTextYeh visible text ko show karta hai aur tags ko hatata hai.  
+
+---
+
+3. `textContent
+Yeh property kisi element ka pure text deti hai, chahe wo screen par visible ho ya na ho. Yeh tags ko completely ignore karta hai.  
+
+#### Example:
+<div id="myDiv"><b>Welcome</b> to my page!</div>
+
+
+<script>
+  let div = document.getElementById("myDiv");
+
+  // Reading textContent
+  console.log(div.textContent); // Output: Welcome to my page!
+
+  // Updating textContent
+  div.textContent = "Hello, User!";
+</script>
+
+
+textContent tags ko completely remove karta hai, chahe wo visible ho ya nahi.  
+
+---
+
+### **Comparison Table**:
+
+| **Property**      | **HTML Tags Handle Karta Hai?** | **Visible Text Deta Hai?** | **Hidden   Text Include Karta Hai?** |
+|--------------------|---------------------------------|----------------------------|-------------------------------------|
+| `innerHTML`        | Yes                             | Yes                        | Yes                                 |
+| `innerText`        | No                              | Yes                        | No                                  |
+| `textContent`      | No                              | Yes                        | Yes                                 |
+
+---
+
+**Real-World Usage:**
+1. Agar aapko dynamic HTML insert karna ho (e.g., `<p>`, `<b>` tags), toh `innerHTML` use karein.  
+2. Sirf dikhte hue text ko access/update karne ke liye `innerText` use karein.  
+3. Pure text (chahe visible ho ya na ho) ke liye `textContent` use karein.
 
 Events
 
