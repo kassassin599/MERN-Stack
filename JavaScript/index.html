@@ -6,18 +6,104 @@
   <title>Document</title>
 </head>
 <body>
+  <style>
+     table, th, td {
+
+border: 1px solid black;
+
+border-collapse: collapse;
+
+padding: 8px;
+
+}
+
+th, td {
+
+width: 100px;
+
+text-align: center;
+
+}
+
+
+  </style>
   
-  <div id="myDiv"><b>Welcome</b> to my page!</div>
+  <button onclick="addRow()">Add Row</button>
+
+    <button onclick="addColumn()">Add Column</button>
+
+    <table id="dynamicTable">
+
+        <tr>
+
+            <th contenteditable="true">Header 1</th>
+
+            <th contenteditable="true">Header 2</th>
+
+        </tr>
+
+        <tr>
+
+            <td contenteditable="true">Cell 1.1</td>
+
+            <td contenteditable="true">Cell 1.2</td>
+
+        </tr>
+        
+
+    </table>
+
 
 
   <script>
-    let div = document.getElementById("myDiv");
-  
-    // Reading textContent
-    console.log(div.textContent); // Output: Welcome to my page!
-  
-    // Updating textContent
-    div.textContent = "Hello, User!";
+   function addRow() {
+
+const table = document.getElementById('dynamicTable');
+
+const row = table.insertRow();
+
+
+for (let i = 0; i < table.rows[0].cells.length; i++) {
+
+    const cell = row.insertCell();
+
+    cell.textContent = `Cell ${table.rows.length - 1}.${i + 1}`;
+
+    cell.contentEditable = "true";
+
+}
+
+}
+
+
+
+function addColumn() {
+
+const table = document.getElementById('dynamicTable');
+
+const headerRow = table.rows[0];
+
+const headerCell = document.createElement('th');
+
+headerCell.textContent = `Header ${headerRow.cells.length + 1}`;
+
+headerCell.contentEditable = "true";  
+
+headerRow.appendChild(headerCell);
+
+
+
+for (let i = 1; i < table.rows.length; i++) {
+
+    const cell = table.rows[i].insertCell();
+
+    cell.textContent = `Cell ${i}.${table.rows[i].cells.length}`;
+
+    cell.contentEditable = "true";
+
+}
+
+}
   </script>
 </body>
 </html>
