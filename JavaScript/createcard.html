@@ -64,6 +64,14 @@
       .hidden {
         display: none;
       }
+      #lightboxDetails{
+        max-width: 100%;
+        max-height: 100%;
+        background-color: cadetblue;
+        border: 5px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+      }
     </style>
 
     <form id="myForm">
@@ -79,13 +87,21 @@
         id="designationInput"
         placeholder="Enter your designation"
       />
-      <br />
+      <br/>
+      <label for="detailsInput">More Info:</label>
+      <input
+        type="text"
+        id="detailsInput"
+        placeholder="Enter more details..."
+      />
+      <br>
       <label for="imageInput">Profile Picture: </label>
       <input type="file" id="imageInput" accept="image/*" value="" /> <br />
       <button type="submit">Submit</button>
     </form>
     <br />
 
+    <label for="searchInput">Search:</label>
     <input type="text" id="searchInput" placeholder="Search..." />
     <p id="greeting"></p>
     <br /><br /><br /><br /><br />
@@ -93,7 +109,9 @@
     <div id="cards"></div>
 
     <div class="lightbox" id="lightbox">
-      <div id="lightboxcard"></div>
+      <div id="lightboxcard">
+          <div id="lightboxDetails"></div>
+      </div>
     </div>
     <script>
       document.getElementById("myForm").addEventListener("submit", (event) => {
@@ -101,7 +119,8 @@
 
         const nameInput = document.getElementById("nameInput").value;
         const designationInput =
-          document.getElementById("designationInput").value;
+        document.getElementById("designationInput").value;
+        const detailsInput = document.getElementById("detailsInput").value;
         const imageInput = document.getElementById("imageInput").files[0];
 
         const greeting = document.getElementById("greeting");
@@ -119,6 +138,7 @@
         const lightbox = document.getElementById("lightbox");
 
         const lightboxcard = document.getElementById("lightboxcard");
+        const lightboxDetails = document.getElementById("lightboxDetails");
 
         if (imageInput) {
           const cards = document.getElementById("cards");
@@ -133,10 +153,13 @@
               <img src="${e.target.result}" alt="profile-image" width="100%" height="300px" style="background-image: linear-gradient(blue, cadetblue);">
               <h3>${nameInput}</h3>
               <h4>${designationInput}</h4>
+              <p style="display:none;">Deatils: ${detailsInput}</p>
             `;
             cards.appendChild(card);
             card.addEventListener("click", function (event) {
-              lightboxcard.innerHTML = card.innerHTML;
+              lightboxDetails.innerHTML = card.innerHTML;
+              lightboxDetails.getElementsByTagName("img")[0].style.width = "300px";
+              lightboxDetails.getElementsByTagName("p")[0].style.display =  "flex";
 
               lightbox.style.display = "flex";
             });
@@ -148,10 +171,11 @@
         document.getElementById("nameInput").value = "";
         document.getElementById("designationInput").value = "";
         document.getElementById("imageInput").value = "";
+        document.getElementById("detailsInput").value = "";
       });
 
       lightbox.addEventListener("click", function () {
-        lightboxcard.innerHTML = "";
+        lightboxDetails.innerHTML = "";
 
         lightbox.style.display = "none";
       });
