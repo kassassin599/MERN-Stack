@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* #image1{
+            display: none;
+        } */
+        #image1:hover{
+            visibility: hidden;
+        }
+
+        #image1:hover + #image2{
+            display: block;
+        }
+
+        #image2{
+            display: none;
+        }
+    </style>
+    <img id="image1" src="/mountain.png" alt="" height="200px" width="200px">
+    <img id="image2" src="/productimage.jpg" alt="" height="200px" width="200px">
+</body>
+</html>
